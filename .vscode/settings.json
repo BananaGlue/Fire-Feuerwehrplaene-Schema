@@ -62,9 +62,9 @@
     },
     {
       "fileMatch": [
-        "/*_f_vorbeugenderBaulicherBrandschutz.geojson"
+        "/*_f_vorbeugenderbaulicherbrandschutz.geojson"
       ],
-      "url": ".schemas/f_vorbeugenderBaulicherBrandschutz.schema.json"
+      "url": ".schemas/f_vorbeugenderbaulicherbrandschutz.schema.json"
     }
   ]
 }
