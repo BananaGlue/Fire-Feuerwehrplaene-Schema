@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://fireapp.io/f_vorbeugenderBaulicherBrandschutz.schema.json",
-  "title": "f_vorbeugenderBaulicherBrandschutz",
+  "$id": "https://fireapp.io/f_vorbeugenderbaulicherbrandschutz.schema.json",
+  "title": "f_vorbeugenderbaulicherbrandschutz",
   "description": "Umfasst Elemente mit einer flächenhaften Ausprägung. Sie können in Kombination mit Elementen aus punkförmiger Darstellung auftreten.\nFür Einsatzkräfte befahrbare oder nicht befahrbare Flächen sind nur auf privaten Geländen darzustellen. Das öffentliche Straßenland ist im Regelfall unangetastet zu lassen.",
   "type": "object",
   "properties": {

@@ -73,13 +73,13 @@
               "description": "Aufgeschaltet",
               "type": "boolean"
             },
-            "UGM": {
-              "description": "UGM-Nummer",
-              "type": "integer"
+            "DREH": {
+              "description": "Drehwinkel",
+              "type": "number"
             },
-            "PRIV": {
-              "description": "Privat",
-              "type": "boolean"
+            "BESCH": {
+              "description": "Beschränkung",
+              "type": "number"
             },
             "ANM": {
               "description": "Anmerkung",
@@ -92,8 +92,8 @@
             "STN",
             "AKT",
             "AUF",
-            "UGM",
-            "PRIV",
+            "DREH",
+            "BESCH",
             "ANM"
           ]
         }
