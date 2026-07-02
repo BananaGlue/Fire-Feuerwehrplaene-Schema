@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fireapp.io/p_sonstigesymbole.schema.json",
+  "title": "p_sonstigesymbole",
+  "description": "Bietet die Möglichkeit besondere Elemente, welche über die Liste nicht vordefiniert sind einzufügen und ist optional.",
+  "type": "object",
+  "properties": {
+    "type": {
+      "type": "string",
+      "enum": [
+        "FeatureCollection"
+      ]
+    },
+    "features": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/SonstigeSymbolePointFeature"
+      }
+    }
+  },
+  "required": [
+    "type",
+    "features"
+  ],
+  "$defs": {
+    "SonstigeSymbolePointFeature": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "Feature"
+          ]
+        },
+        "geometry": {
+          "oneOf": [
+            {
+              "$ref": "GeoJSON.schema.json#/$defs/Point"
+            }
+          ]
+        },
+        "properties": {
+          "type": "object",
+          "properties": {
+            "BEZ": {
+              "description": "Bezeichnung",
+              "type": "string",
+              "enum": [
+                "P700",
+                "P701",
+                "P702"
+              ]
+            },
+            "FWPNR": {
+              "description": "Feuerwehrplannummer",
+              "type": "string"
+            },
+            "STN": {
+              "description": "Stand",
+              "type": "string",
+              "format": "date"
+            },
+            "AKT": {
+              "description": "Aktualisierung",
+              "type": "string",
+              "format": "date"
+            },
+            "ANM": {
+              "description": "Anmerkung",
+              "type": "string"
+            }
+          },
+          "required": [
+            "BEZ",
+            "FWPNR",
+            "STN",
+            "AKT",
+            "ANM"
+          ]
+        }
+      },
+      "required": [
+        "type",
+        "geometry",
+        "properties"
+      ]
+    }
+  }
+}

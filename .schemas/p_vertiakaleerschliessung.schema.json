@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fireapp.io/p_besonderegefahren.schema.json",
+  "title": "p_besonderegefahren",
+  "description": "Umfasst Hinweise auf besondere Gefahren. Über die Bezeichnung wird die Art der Gefahr definiert über das Attribut „GEF“ wird die Gefahrenquelle definiert. Detailangaben zu Menge, Sicherheitsabstand und Gefahrengruppe sind bei Bedarf in Abhängigkeit zum jeweiligen Element zu wählen.",
+  "type": "object",
+  "properties": {
+    "type": {
+      "type": "string",
+      "enum": [
+        "FeatureCollection"
+      ]
+    },
+    "features": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/VertiakaleErschliessungPointFeature"
+      }
+    }
+  },
+  "required": [
+    "type",
+    "features"
+  ],
+  "$defs": {
+    "VertiakaleErschliessungPointFeature": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "Feature"
+          ]
+        },
+        "geometry": {
+          "oneOf": [
+            {
+              "$ref": "GeoJSON.schema.json#/$defs/Point"
+            }
+          ]
+        },
+        "properties": {
+          "type": "object",
+          "properties": {
+            "BEZ": {
+              "description": "Bezeichnung",
+              "type": "string",
+              "enum": [
+                "P500",
+                "P501",
+                "P502",
+                "P503",
+                "P504",
+                "P505",
+                "P506",
+                "P507"
+              ]
+            },
+            "FWPNR": {
+              "description": "Feuerwehrplannummer",
+              "type": "string"
+            },
+            "STN": {
+              "description": "Stand",
+              "type": "string",
+              "format": "date"
+            },
+            "AKT": {
+              "description": "Aktualisierung",
+              "type": "string",
+              "format": "date"
+            },
+            "KEN": {
+              "description": "Kennzeichnung",
+              "type": "string"
+            },
+            "GESCHU": {
+              "description": "unterstes Geschoss",
+              "type": "integer"
+            },
+            "GESCHO": {
+              "description": "oberstes Geschoss",
+              "type": "boolean"
+            },
+            "ANM": {
+              "description": "Anmerkung",
+              "type": "string"
+            }
+          },
+          "required": [
+            "BEZ",
+            "FWPNR",
+            "STN",
+            "AKT",
+            "KEN",
+            "GESCHU",
+            "GESCHO",
+            "ANM"
+          ]
+        }
+      },
+      "required": [
+        "type",
+        "geometry",
+        "properties"
+      ]
+    }
+  }
+}

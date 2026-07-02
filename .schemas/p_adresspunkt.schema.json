@@ -1,0 +1,112 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fireapp.io/p_adresspunkt.schema.json",
+  "title": "p_adresspunkt",
+  "description": "Dient der Hinterlegung von Daten zu Adresse, Betreiber und Planersteller. Die Platzierung soll an der straßenzugewandten Seite der (Haupt-) Gebäudefläche erfolgen.",
+  "type": "object",
+  "properties": {
+    "type": {
+      "type": "string",
+      "enum": [
+        "FeatureCollection"
+      ]
+    },
+    "features": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/AdresspunktPointFeature"
+      }
+    }
+  },
+  "required": [
+    "type",
+    "features"
+  ],
+  "$defs": {
+    "AdresspunktPointFeature": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "Feature"
+          ]
+        },
+        "geometry": {
+          "oneOf": [
+            {
+              "$ref": "GeoJSON.schema.json#/$defs/Point"
+            }
+          ]
+        },
+        "properties": {
+          "type": "object",
+          "properties": {
+            "BEZ": {
+              "description": "Bezeichnung",
+              "type": "string",
+              "enum": [
+                "P000"
+              ]
+            },
+            "FWPNR": {
+              "description": "Feuerwehrplannummer",
+              "type": "string"
+            },
+            "STN": {
+              "description": "Stand",
+              "type": "string",
+              "format": "date"
+            },
+            "AKT": {
+              "description": "Aktualisierung",
+              "type": "string",
+              "format": "date"
+            },
+            "STRHNR": {
+              "description": "Straße HausNr.",
+              "type": "string"
+            },
+            "PLZ": {
+              "description": "Postleitzahl",
+              "type": "integer"
+            },
+            "ORT": {
+              "description": "Ort",
+              "type": "string"
+            },
+            "BTR": {
+              "description": "Gebäudebetreiber",
+              "type": "string"
+            },
+            "PLER": {
+              "description": "Planersteller",
+              "type": "string"
+            },
+            "ANM": {
+              "description": "Anmerkung",
+              "type": "string"
+            }
+          },
+          "required": [
+            "BEZ",
+            "FWPNR",
+            "STN",
+            "AKT",
+            "STRHNR",
+            "PLZ",
+            "ORT",
+            "BTR",
+            "PLER",
+            "ANM"
+          ]
+        }
+      },
+      "required": [
+        "type",
+        "geometry",
+        "properties"
+      ]
+    }
+  }
+}

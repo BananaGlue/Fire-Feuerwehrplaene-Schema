@@ -1,0 +1,70 @@
+{
+  "json.schemas": [
+    {
+      "fileMatch": [
+        "/*_p_adresspunkt.geojson"
+      ],
+      "url": ".schemas/p_adresspunkt.schema.json"
+    },
+    {
+      "fileMatch": [
+        "/*_p_brandmeldezentrale.geojson"
+      ],
+      "url": ".schemas/p_brandmeldezentrale.schema.json"
+    },
+    {
+      "fileMatch": [
+        "/*_p_zufahrt_zugang.geojson"
+      ],
+      "url": ".schemas/p_zufahrt_zugang.schema.json"
+    },
+    {
+      "fileMatch": [
+        "/*_p_loeschwasserversorgung.geojson"
+      ],
+      "url": ".schemas/p_loeschwasserversorgung.schema.json"
+    },
+    {
+      "fileMatch": [
+        "/*_p_vorbeugenderbaulicherbrandschutz.geojson"
+      ],
+      "url": ".schemas/p_vorbeugenderbaulicherbrandschutz.schema.json"
+    },
+    {
+      "fileMatch": [
+        "/*_p_vertiakaleerschliessung.geojson"
+      ],
+      "url": ".schemas/p_vertiakaleerschliessung.schema.json"
+    },
+    {
+      "fileMatch": [
+        "/*_p_besonderegefahren.geojson"
+      ],
+      "url": ".schemas/p_besonderegefahren.schema.json"
+    },
+    {
+      "fileMatch": [
+        "/*_p_sonstigesymbole.geojson"
+      ],
+      "url": ".schemas/p_sonstigesymbole.schema.json"
+    },
+    {
+      "fileMatch": [
+        "/*_l_vorbeugenderbaulicherbrandschutz.geojson"
+      ],
+      "url": ".schemas/l_vorbeugenderbaulicherbrandschutz.schema.json"
+    },
+    {
+      "fileMatch": [
+        "/*_l_feuerwehrzufahrten.geojson"
+      ],
+      "url": ".schemas/p_brandmell_feuerwehrzufahrtendezentrale.schema.json"
+    },
+    {
+      "fileMatch": [
+        "/*_f_vorbeugenderBaulicherBrandschutz.geojson"
+      ],
+      "url": ".schemas/f_vorbeugenderBaulicherBrandschutz.schema.json"
+    }
+  ]
+}

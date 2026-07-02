@@ -1,0 +1,129 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fireapp.io/p_besonderegefahren.schema.json",
+  "title": "p_besonderegefahren",
+  "description": "Umfasst Hinweise auf besondere Gefahren. Über die Bezeichnung wird die Art der Gefahr definiert über das Attribut „GEF“ wird die Gefahrenquelle definiert. Detailangaben zu Menge, Sicherheitsabstand und Gefahrengruppe sind bei Bedarf in Abhängigkeit zum jeweiligen Element zu wählen.",
+  "type": "object",
+  "properties": {
+    "type": {
+      "type": "string",
+      "enum": [
+        "FeatureCollection"
+      ]
+    },
+    "features": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/BesondereGefahrenPointFeature"
+      }
+    }
+  },
+  "required": [
+    "type",
+    "features"
+  ],
+  "$defs": {
+    "BesondereGefahrenPointFeature": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "Feature"
+          ]
+        },
+        "geometry": {
+          "oneOf": [
+            {
+              "$ref": "GeoJSON.schema.json#/$defs/Point"
+            }
+          ]
+        },
+        "properties": {
+          "type": "object",
+          "properties": {
+            "BEZ": {
+              "description": "Bezeichnung",
+              "type": "string",
+              "enum": [
+                "P600",
+                "P601",
+                "P602",
+                "P603",
+                "P604",
+                "P605",
+                "P606",
+                "P607",
+                "P608",
+                "P609",
+                "P610",
+                "P611",
+                "P612",
+                "P613",
+                "P614",
+                "P615",
+                "P616",
+                "P617"
+              ]
+            },
+            "FWPNR": {
+              "description": "Feuerwehrplannummer",
+              "type": "string"
+            },
+            "STN": {
+              "description": "Stand",
+              "type": "string",
+              "format": "date"
+            },
+            "AKT": {
+              "description": "Aktualisierung",
+              "type": "string",
+              "format": "date"
+            },
+            "GEF": {
+              "description": "Gefahr",
+              "type": "string"
+            },
+            "GESCH": {
+              "description": "Geschoss",
+              "type": "string"
+            },
+            "STD": {
+              "description": "Standort",
+              "type": "string"
+            },
+            "MENG": {
+              "description": "Menge",
+              "type": "string"
+            },
+            "SAB": {
+              "description": "Sicherheitsabstand",
+              "type": "string"
+            },
+            "GFG": {
+              "description": "Gefahrengruppe",
+              "type": "string"
+            }
+          },
+          "required": [
+            "BEZ",
+            "FWPNR",
+            "STN",
+            "AKT",
+            "GEF",
+            "GESCH",
+            "STD",
+            "MENG",
+            "SAB",
+            "GFG"
+          ]
+        }
+      },
+      "required": [
+        "type",
+        "geometry",
+        "properties"
+      ]
+    }
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fireapp.io/f_vorbeugenderBaulicherBrandschutz.schema.json",
+  "title": "f_vorbeugenderBaulicherBrandschutz",
+  "description": "Umfasst Elemente mit einer flächenhaften Ausprägung. Sie können in Kombination mit Elementen aus punkförmiger Darstellung auftreten.\nFür Einsatzkräfte befahrbare oder nicht befahrbare Flächen sind nur auf privaten Geländen darzustellen. Das öffentliche Straßenland ist im Regelfall unangetastet zu lassen.",
+  "type": "object",
+  "properties": {
+    "type": {
+      "type": "string",
+      "enum": [
+        "FeatureCollection"
+      ]
+    },
+    "features": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/VorbeugenderBaulicherBrandschutzPolygonFeature"
+      }
+    }
+  },
+  "required": [
+    "type",
+    "features"
+  ],
+  "$defs": {
+    "VorbeugenderBaulicherBrandschutzPolygonFeature": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "Feature"
+          ]
+        },
+        "geometry": {
+          "oneOf": [
+            {
+              "$ref": "GeoJSON.schema.json#/$defs/Polygon"
+            }
+          ]
+        },
+        "properties": {
+          "type": "object",
+          "properties": {
+            "BEZ": {
+              "description": "Bezeichnung",
+              "type": "string",
+              "enum": [
+                "F100",
+                "F101",
+                "F102",
+                "F103",
+                "F104",
+                "F105",
+                "F106",
+                "F107",
+                "F108",
+                "F109"
+              ]
+            },
+            "FWPNR": {
+              "description": "Feuerwehrplannummer",
+              "type": "string"
+            },
+            "STN": {
+              "description": "Stand",
+              "type": "string",
+              "format": "date"
+            },
+            "AKT": {
+              "description": "Aktualisierung",
+              "type": "string",
+              "format": "date"
+            },
+            "GESCH": {
+              "description": "Straße HausNr.",
+              "type": "string"
+            },
+            "FERT": {
+              "description": "Fertigstellung",
+              "type": "string",
+              "format": "date"
+            },
+            "ANM": {
+              "description": "Anmerkung",
+              "type": "string"
+            }
+          },
+          "required": [
+            "BEZ",
+            "FWPNR",
+            "STN",
+            "AKT",
+            "GESCH",
+            "FERT",
+            "ANM"
+          ]
+        }
+      },
+      "required": [
+        "type",
+        "geometry",
+        "properties"
+      ]
+    }
+  }
+}

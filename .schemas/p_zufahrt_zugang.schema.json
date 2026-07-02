@@ -1,0 +1,108 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fireapp.io/p_zufahrt_zugang.schema.json",
+  "title": "p_zufahrt_zugang",
+  "description": "Umfasst Daten zu den Zufahrtsmöglichkeiten für die Feuerwehr, sowie mögliche Beschränkungen, welche diese unterliegen. Zusätzlich werden hier Daten über die Gebäudezugänge erfasst. Bei der Platzierung von Zufahrten und Zugängen ist die Rotationsausrichtung anzufügen (s. Attribut „DREH“), um eine korrekte Ausrichtung einer Pfeil-Symbolisierung zu gewährleisten. Bei Beschränkungen ist Rotationsausrichtung obsolet.",
+  "type": "object",
+  "properties": {
+    "type": {
+      "type": "string",
+      "enum": [
+        "FeatureCollection"
+      ]
+    },
+    "features": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/ZufahrtZugangPointFeature"
+      }
+    }
+  },
+  "required": [
+    "type",
+    "features"
+  ],
+  "$defs": {
+    "ZufahrtZugangPointFeature": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "Feature"
+          ]
+        },
+        "geometry": {
+          "oneOf": [
+            {
+              "$ref": "GeoJSON.schema.json#/$defs/Point"
+            }
+          ]
+        },
+        "properties": {
+          "type": "object",
+          "properties": {
+            "BEZ": {
+              "description": "Bezeichnung",
+              "type": "string",
+              "enum": [
+                "P200",
+                "P201",
+                "P202",
+                "P203",
+                "P204",
+                "P205",
+                "P206"
+              ]
+            },
+            "FWPNR": {
+              "description": "Feuerwehrplannummer",
+              "type": "string"
+            },
+            "STN": {
+              "description": "Stand",
+              "type": "string",
+              "format": "date"
+            },
+            "AKT": {
+              "description": "Aktualisierung",
+              "type": "string",
+              "format": "date"
+            },
+            "AUF": {
+              "description": "Aufgeschaltet",
+              "type": "boolean"
+            },
+            "UGM": {
+              "description": "UGM-Nummer",
+              "type": "integer"
+            },
+            "PRIV": {
+              "description": "Privat",
+              "type": "boolean"
+            },
+            "ANM": {
+              "description": "Anmerkung",
+              "type": "string"
+            }
+          },
+          "required": [
+            "BEZ",
+            "FWPNR",
+            "STN",
+            "AKT",
+            "AUF",
+            "UGM",
+            "PRIV",
+            "ANM"
+          ]
+        }
+      },
+      "required": [
+        "type",
+        "geometry",
+        "properties"
+      ]
+    }
+  }
+}
