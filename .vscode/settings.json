@@ -58,7 +58,7 @@
       "fileMatch": [
         "/*_l_feuerwehrzufahrten.geojson"
       ],
-      "url": ".schemas/p_brandmell_feuerwehrzufahrtendezentrale.schema.json"
+      "url": ".schemas/l_feuerwehrzufahrten.schema.json"
     },
     {
       "fileMatch": [
