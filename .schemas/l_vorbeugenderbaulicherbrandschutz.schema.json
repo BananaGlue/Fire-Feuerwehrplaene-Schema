@@ -53,7 +53,7 @@
             },
             "FWPNR": {
               "description": "Feuerwehrplannummer",
-              "type": "string"
+              "$ref": "GeoJSON.schema.json#/$defs/TrimmedString"
             },
             "STN": {
               "description": "Stand",
@@ -67,19 +67,19 @@
             },
             "GESCHU": {
               "description": "Straße HausNr.",
-              "type": "string"
+              "$ref": "GeoJSON.schema.json#/$defs/TrimmedString"
             },
             "GESCHO": {
               "description": "unterstes Geschoss",
-              "type": "string"
+              "$ref": "GeoJSON.schema.json#/$defs/TrimmedString"
             },
             "ORT": {
               "description": "oberstes Geschoss",
-              "type": "string"
+              "$ref": "GeoJSON.schema.json#/$defs/TrimmedString"
             },
             "ANM": {
               "description": "Anmerkung",
-              "type": "string"
+              "$ref": "GeoJSON.schema.json#/$defs/TrimmedString"
             }
           },
           "required": [

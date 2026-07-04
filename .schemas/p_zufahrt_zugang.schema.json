@@ -57,7 +57,7 @@
             },
             "FWPNR": {
               "description": "Feuerwehrplannummer",
-              "type": "string"
+              "$ref": "GeoJSON.schema.json#/$defs/TrimmedString"
             },
             "STN": {
               "description": "Stand",
@@ -83,7 +83,7 @@
             },
             "ANM": {
               "description": "Anmerkung",
-              "type": "string"
+              "$ref": "GeoJSON.schema.json#/$defs/TrimmedString"
             }
           },
           "required": [

@@ -68,7 +68,7 @@
             },
             "FWPNR": {
               "description": "Feuerwehrplannummer",
-              "type": "string"
+              "$ref": "GeoJSON.schema.json#/$defs/TrimmedString"
             },
             "STN": {
               "description": "Stand",
@@ -82,27 +82,27 @@
             },
             "GEF": {
               "description": "Gefahr",
-              "type": "string"
+              "$ref": "GeoJSON.schema.json#/$defs/TrimmedString"
             },
             "GESCH": {
               "description": "Geschoss",
-              "type": "string"
+              "$ref": "GeoJSON.schema.json#/$defs/TrimmedString"
             },
             "STD": {
               "description": "Standort",
-              "type": "string"
+              "$ref": "GeoJSON.schema.json#/$defs/TrimmedString"
             },
             "MENG": {
               "description": "Menge",
-              "type": "string"
+              "$ref": "GeoJSON.schema.json#/$defs/TrimmedString"
             },
             "SAB": {
               "description": "Sicherheitsabstand",
-              "type": "string"
+              "$ref": "GeoJSON.schema.json#/$defs/TrimmedString"
             },
             "GFG": {
               "description": "Gefahrengruppe",
-              "type": "string"
+              "$ref": "GeoJSON.schema.json#/$defs/TrimmedString"
             }
           },
           "required": [

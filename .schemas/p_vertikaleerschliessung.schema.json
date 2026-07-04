@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://fireapp.io/p_vertiakaleerschliessung.schema.json",
-  "title": "p_vertiakaleerschliessung",
+  "$id": "https://fireapp.io/p_vertikaleerschliessung.schema.json",
+  "title": "p_vertikaleerschliessung",
   "description": "Dient der Darstellung von Elementen der vertikalen Erschließung eines Gebäudes.",
   "type": "object",
   "properties": {
@@ -58,7 +58,7 @@
             },
             "FWPNR": {
               "description": "Feuerwehrplannummer",
-              "type": "string"
+              "$ref": "GeoJSON.schema.json#/$defs/TrimmedString"
             },
             "STN": {
               "description": "Stand",
@@ -72,19 +72,19 @@
             },
             "KEN": {
               "description": "Kennzeichnung",
-              "type": "string"
+              "$ref": "GeoJSON.schema.json#/$defs/TrimmedString"
             },
             "GESCHU": {
               "description": "unterstes Geschoss",
-              "type": "integer"
+              "$ref": "GeoJSON.schema.json#/$defs/TrimmedString"
             },
             "GESCHO": {
               "description": "oberstes Geschoss",
-              "type": "boolean"
+              "$ref": "GeoJSON.schema.json#/$defs/TrimmedString"
             },
             "ANM": {
               "description": "Anmerkung",
-              "type": "string"
+              "$ref": "GeoJSON.schema.json#/$defs/TrimmedString"
             }
           },
           "required": [

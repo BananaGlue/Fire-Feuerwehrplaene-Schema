@@ -44,16 +44,11 @@
           "properties": {
             "BEZ": {
               "description": "Bezeichnung",
-              "type": "string",
-              "enum": [
-                "P700",
-                "P701",
-                "P702"
-              ]
+              "$ref": "GeoJSON.schema.json#/$defs/TrimmedString"
             },
             "FWPNR": {
               "description": "Feuerwehrplannummer",
-              "type": "string"
+              "$ref": "GeoJSON.schema.json#/$defs/TrimmedString"
             },
             "STN": {
               "description": "Stand",
@@ -67,7 +62,7 @@
             },
             "ANM": {
               "description": "Anmerkung",
-              "type": "string"
+              "$ref": "GeoJSON.schema.json#/$defs/TrimmedString"
             }
           },
           "required": [

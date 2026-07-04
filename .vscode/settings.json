@@ -32,9 +32,9 @@
     },
     {
       "fileMatch": [
-        "/*_p_vertiakaleerschliessung.geojson"
+        "/*_p_vertikaleerschliessung.geojson"
       ],
-      "url": ".schemas/p_vertiakaleerschliessung.schema.json"
+      "url": ".schemas/p_vertikaleerschliessung.schema.json"
     },
     {
       "fileMatch": [
