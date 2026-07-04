@@ -1,0 +1,34 @@
+{
+  "type": "FeatureCollection",
+  "title": "p_vorbeugenderbaulicherbrandschutz",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "BEZ": "P400",
+        "FWPNR": "170174",
+        "STN": "2026-06-18",
+        "AKT": "2026-06-18",
+        "GESCH": "+14",
+        "STD": "Raum 104.2",
+        "HAUPT": "170174",
+        "PVS": false,
+        "FWK": "170174",
+        "ANM": "Hinter der Pforte links."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.274810167237665,
+          51.45652479113506
+        ]
+      }
+    }
+  ]
+}
