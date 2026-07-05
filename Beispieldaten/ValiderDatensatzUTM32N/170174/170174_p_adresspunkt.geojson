@@ -1,0 +1,56 @@
+{
+  "type": "FeatureCollection",
+  "name": "p_adresspunkt",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:EPSG::25832"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "BEZ": "P000",
+        "FWPNR": "170174",
+        "STN": "18.06.26",
+        "AKT": "18.06.26",
+        "STRHNR": "Hauptstr. 120",
+        "PLZ": 10997,
+        "ORT": "Berlin",
+        "PLER": "HHP",
+        "BTR": "Hauptbahnhof",
+        "ANM": "Weiteres Feuerwehrplanobjekt 170178 an derselben Adresse."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          380212.067361763853114,
+          5702115.286580762825906
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "BEZ": "P000",
+        "FWPNR": "170174",
+        "STN": "18.06.26",
+        "AKT": "18.06.26",
+        "STRHNR": "Nebenstr. 83",
+        "PLZ": 10997,
+        "ORT": "Berlin",
+        "PLER": "HHP",
+        "BTR": "Hauptbahnhof",
+        "ANM": "Weiteres Feuerwehrplanobjekt 170178 an derselben Adresse."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          380932.801406865473837,
+          5703210.993104639463127
+        ]
+      }
+    }
+  ]
+}

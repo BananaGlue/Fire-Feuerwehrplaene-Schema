@@ -14,7 +14,7 @@
     "features": {
       "type": "array",
       "items": {
-        "$ref": "#/$defs/VertiakaleErschliessungPointFeature"
+        "$ref": "#/$defs/VertikaleErschliessungPointFeature"
       }
     }
   },
@@ -23,7 +23,7 @@
     "features"
   ],
   "$defs": {
-    "VertiakaleErschliessungPointFeature": {
+    "VertikaleErschliessungPointFeature": {
       "type": "object",
       "properties": {
         "type": {
