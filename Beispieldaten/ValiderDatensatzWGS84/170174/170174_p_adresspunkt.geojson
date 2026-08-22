@@ -1,6 +1,6 @@
 {
   "type": "FeatureCollection",
-  "title": "p_zufahrt_zugang",
+  "title": "p_adresspunkt",
   "crs": {
     "type": "name",
     "properties": {
