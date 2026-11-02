@@ -1,6 +1,6 @@
 {
   "type": "FeatureCollection",
-  "title": "f_vorbeugenderbaulicherbrandschutz",
+  "name": "f_vorbeugenderbaulicherbrandschutz",
   "crs": {
     "type": "name",
     "properties": {

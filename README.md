@@ -49,7 +49,7 @@ Es ist utf-8 als Zeichensatz zu verwenden.
 
 TODO:
 add this to schema:
-  "title": "p_vertikaleerschliessung",
+  "name": "p_vertikaleerschliessung",
   "crs": {
     "type": "name",
     "properties": {

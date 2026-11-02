@@ -1,6 +1,6 @@
 {
   "type": "FeatureCollection",
-  "title": "p_brandmeldezentrale",
+  "name": "p_brandmeldezentrale",
   "crs": {
     "type": "name",
     "properties": {

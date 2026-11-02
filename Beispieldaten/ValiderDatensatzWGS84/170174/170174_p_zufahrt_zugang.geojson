@@ -1,6 +1,6 @@
 {
   "type": "FeatureCollection",
-  "title": "p_zufahrt_zugang",
+  "name": "p_zufahrt_zugang",
   "crs": {
     "type": "name",
     "properties": {

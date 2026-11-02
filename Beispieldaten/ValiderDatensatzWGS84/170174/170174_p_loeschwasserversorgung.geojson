@@ -1,6 +1,6 @@
 {
   "type": "FeatureCollection",
-  "title": "p_loeschwasserversorgung",
+  "name": "p_loeschwasserversorgung",
   "crs": {
     "type": "name",
     "properties": {

@@ -13,11 +13,9 @@
         {
           "type": "object",
           "properties": {
-            "title": {
+            "name": {
               "type": "string",
-              "enum": [
-                "p_besonderegefahren"
-              ]
+              "pattern": "^(.+_)?p_besonderegefahren$"
             },
             "features": {
               "type": "array",
@@ -27,7 +25,6 @@
             }
           },
           "required": [
-            "title",
             "features"
           ]
         }

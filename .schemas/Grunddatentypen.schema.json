@@ -81,16 +81,28 @@
                 "name": {
                   "type": "string",
                   "enum": [
-                    "urn:ogc:def:crs:OGC:1.3:CRS84"
+                    "urn:ogc:def:crs:OGC:1.3:CRS84",
+                    "urn:ogc:def:crs:EPSG::25832",
+                    "urn:ogc:def:crs:EPSG::25833",
+                    "EPSG:25832",
+                    "EPSG:25833"
                   ]
                 }
-              }
+              },
+              "required": [
+                "name"
+              ]
             }
-          }
+          },
+          "required": [
+            "type",
+            "properties"
+          ]
         }
       },
       "required": [
-        "type"
+        "type",
+        "crs"
       ]
     },
     "PolygonFeature": {

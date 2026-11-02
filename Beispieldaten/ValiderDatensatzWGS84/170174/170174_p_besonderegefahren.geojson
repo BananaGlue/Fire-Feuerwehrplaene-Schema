@@ -1,6 +1,6 @@
 {
   "type": "FeatureCollection",
-  "title": "p_besonderegefahren",
+  "name": "p_besonderegefahren",
   "crs": {
     "type": "name",
     "properties": {

@@ -13,11 +13,9 @@
         {
           "type": "object",
           "properties": {
-            "title": {
+            "name": {
               "type": "string",
-              "enum": [
-                "p_zufahrt_zugang"
-              ]
+              "pattern": "^(.+_)?p_zufahrt_zugang$"
             },
             "features": {
               "type": "array",
@@ -27,7 +25,6 @@
             }
           },
           "required": [
-            "title",
             "features"
           ]
         }

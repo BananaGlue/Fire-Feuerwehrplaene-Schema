@@ -1,6 +1,6 @@
 {
   "type": "FeatureCollection",
-  "title": "l_feuerwehrzufahrten",
+  "name": "l_feuerwehrzufahrten",
   "crs": {
     "type": "name",
     "properties": {

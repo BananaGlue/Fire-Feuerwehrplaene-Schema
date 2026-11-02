@@ -1,6 +1,6 @@
 {
   "type": "FeatureCollection",
-  "title": "p_vertikaleerschliessung",
+  "name": "p_vertikaleerschliessung",
   "crs": {
     "type": "name",
     "properties": {

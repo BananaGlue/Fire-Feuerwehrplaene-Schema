@@ -1,6 +1,6 @@
 {
   "type": "FeatureCollection",
-  "title": "p_adresspunkt",
+  "name": "p_adresspunkt",
   "crs": {
     "type": "name",
     "properties": {

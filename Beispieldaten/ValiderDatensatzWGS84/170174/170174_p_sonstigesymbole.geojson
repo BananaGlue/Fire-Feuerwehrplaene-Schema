@@ -1,6 +1,6 @@
 {
   "type": "FeatureCollection",
-  "title": "p_sonstigesymbole",
+  "name": "p_sonstigesymbole",
   "crs": {
     "type": "name",
     "properties": {
