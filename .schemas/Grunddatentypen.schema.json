@@ -1,10 +1,11 @@
 {
-  "$id": "https://fireapp.io/tb-07-01/2026-01/Grunddatentypen.schema.json",
+  "$id": "Grunddatentypen.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$comment": "vfdb TB 07-01:2026-01",
   "$defs": {
     "TrimmedString": {
-      "$ref": "#/$defs/NullableTrimmedString",
-      "type": "string"
+      "type": "string",
+      "pattern": "^\\S(.*\\S)?$"
     },
     "NullableTrimmedString": {
       "type": [
@@ -59,8 +60,9 @@
       "maximum": 360.0
     },
     "Date": {
-      "$ref": "#/$defs/NullableDate",
-      "type": "string"
+      "type": "string",
+      "format": "date",
+      "pattern": "^\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])$"
     },
     "NullableDate": {
       "type": [

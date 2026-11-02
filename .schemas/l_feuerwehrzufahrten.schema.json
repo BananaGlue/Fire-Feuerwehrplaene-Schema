@@ -1,6 +1,7 @@
 {
-  "$id": "https://fireapp.io/tb-07-01/2026-01/l_feuerwehrzufahrten.schema.json",
+  "$id": "l_feuerwehrzufahrten.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$comment": "vfdb TB 07-01:2026-01",
   "title": "l_feuerwehrzufahrten",
   "description": "Umfasst Elemente mit einer linienförmigen Ausprägung und wird in Kombination mit Elementen aus punktförmiger Darstellung verwendet. Hierbei können die geplanten Fahrwege z.B. zu Anleiterstellen auf dem Gelände dargestellt werden.",
   "$ref": "#/$defs/FeuerwehrzufahrtenLineFeatureCollection",

@@ -1,6 +1,7 @@
 {
-  "$id": "https://fireapp.io/tb-07-01/2026-01/p_sonstigesymbole.schema.json",
+  "$id": "p_sonstigesymbole.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$comment": "vfdb TB 07-01:2026-01",
   "title": "p_sonstigesymbole",
   "description": "Bietet die Möglichkeit besondere Elemente, welche über die Liste nicht vordefiniert sind einzufügen und ist optional.",
   "$ref": "#/$defs/SonstigeSymbolePointFeatureCollection",

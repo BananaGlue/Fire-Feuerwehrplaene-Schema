@@ -1,6 +1,7 @@
 {
-  "$id": "https://fireapp.io/tb-07-01/2026-01/p_adresspunkt.schema.json",
+  "$id": "p_adresspunkt.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$comment": "vfdb TB 07-01:2026-01",
   "title": "p_adresspunkt",
   "description": "Dient der Hinterlegung von Daten zu Adresse, Betreiber und Planersteller. Die Platzierung soll an der straßenzugewandten Seite der (Haupt-) Gebäudefläche erfolgen.",
   "$ref": "#/$defs/AdresspunktPointFeatureCollection",

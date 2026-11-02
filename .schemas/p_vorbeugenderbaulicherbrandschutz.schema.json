@@ -1,6 +1,7 @@
 {
-  "$id": "https://fireapp.io/tb-07-01/2026-01/p_vorbeugenderbaulicherbrandschutz.schema.json",
+  "$id": "p_vorbeugenderbaulicherbrandschutz.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$comment": "vfdb TB 07-01:2026-01",
   "title": "p_vorbeugenderbaulicherbrandschutz",
   "description": "Umfasst Daten zu Anlagen des vorbeugenden Baulichen Brandschutzes. Die Notwendigkeit zur Befüllung der einzelnen Fachattribute ist in Abhängigkeit zur jeweiligen Einrichtung zu wählen. Der Elementtyp „Brandwand“ und „Komplextrennwand“ sind mittig zu platzieren. Der genaue Verlauf dieser Elemente ist im Linien-Layer l_vorbeugenderBaulicherBrandschutz zu versorgen.",
   "$ref": "#/$defs/VorbeugenderBaulicherBrandschutzPointFeatureCollection",

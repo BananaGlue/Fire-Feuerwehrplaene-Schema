@@ -1,6 +1,7 @@
 {
-  "$id": "https://fireapp.io/tb-07-01/2026-01/l_vorbeugenderbaulicherbrandschutz.schema.json",
+  "$id": "l_vorbeugenderbaulicherbrandschutz.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$comment": "vfdb TB 07-01:2026-01",
   "title": "l_vorbeugenderbaulicherbrandschutz",
   "description": "Umfasst Elemente mit einer linienförmigen Ausprägung und wird z.T. in Kombination mit Elementen aus punktförmiger Darstellung verwendet.",
   "$ref": "#/$defs/VorbeugenderBaulicherBrandschutzLineFeatureCollection",
