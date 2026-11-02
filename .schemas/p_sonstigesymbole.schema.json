@@ -1,5 +1,5 @@
 {
-  "$id": "p_sonstigesymbole.schema.json",
+  "$id": "https://fireapp.io/p_sonstigesymbole.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "p_sonstigesymbole",
   "description": "Bietet die Möglichkeit besondere Elemente, welche über die Liste nicht vordefiniert sind einzufügen und ist optional.",
@@ -31,7 +31,8 @@
       ]
     },
     "SonstigeSymbolePointBEZ": {
-      "$ref": "Attributdatenfelder.schema.json#/$defs/BEZ"
+      "$ref": "Attributdatenfelder.schema.json#/$defs/BEZ",
+      "pattern": "^P7\\d{2}$"
     },
     "SonstigeSymbolePointFeature": {
       "allOf": [

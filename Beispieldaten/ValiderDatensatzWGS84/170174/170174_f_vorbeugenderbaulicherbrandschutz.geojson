@@ -16,7 +16,7 @@
         "STN": "2026-06-18",
         "AKT": "2026-06-18",
         "GESCH": "0",
-        "FERT": "2026-06-18",
+        "FERT": null,
         "ANM": "Hinter der Pforte links."
       },
       "geometry": {

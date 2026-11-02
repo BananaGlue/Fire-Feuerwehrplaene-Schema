@@ -1,5 +1,5 @@
 {
-  "$id": "p_loeschwasserversorgung.schema.json",
+  "$id": "https://fireapp.io/p_loeschwasserversorgung.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "p_loeschwasserversorgung",
   "description": "Umfasst Daten zu möglichen Löschwasserversorgungseinrichtungen. Die Notwendigkeit zur Befüllung der einzelnen Fachattribute ist in Abhängigkeit zur jeweiligen Einrichtung zu wählen.",

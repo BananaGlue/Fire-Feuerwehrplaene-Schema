@@ -1,5 +1,5 @@
 {
-  "$id": "Grunddatentypen.schema.json",
+  "$id": "https://fireapp.io/Grunddatentypen.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$defs": {
     "TrimmedString": {
@@ -28,12 +28,19 @@
       ],
       "minimum": 0
     },
+    "NullablePositiveInteger": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 1
+    },
     "NullablePLZInteger": {
       "type": [
         "integer",
         "null"
       ],
-      "minimum": 10000,
+      "minimum": 1000,
       "maximum": 99999
     },
     "NullablePositiveNumber": {
@@ -41,7 +48,7 @@
         "number",
         "null"
       ],
-      "minimum": 0.0
+      "exclusiveMinimum": 0
     },
     "NullableDegreeNumber": {
       "type": [
@@ -51,14 +58,20 @@
       "minimum": 0.0,
       "maximum": 360.0
     },
+    "Date": {
+      "$ref": "#/$defs/NullableDate",
+      "type": "string"
+    },
     "NullableDate": {
       "type": [
         "string",
         "null"
       ],
-      "format": "date"
+      "format": "date",
+      "pattern": "^\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])$"
     },
     "FeatureCollection": {
+      "type": "object",
       "properties": {
         "type": {
           "type": "string",

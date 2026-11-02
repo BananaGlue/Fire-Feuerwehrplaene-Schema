@@ -1,5 +1,5 @@
 {
-  "$id": "f_vorbeugenderbaulicherbrandschutz.schema.json",
+  "$id": "https://fireapp.io/f_vorbeugenderbaulicherbrandschutz.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "f_vorbeugenderbaulicherbrandschutz",
   "description": "Umfasst Elemente mit einer flächenhaften Ausprägung. Sie können in Kombination mit Elementen aus punkförmiger Darstellung auftreten.\nFür Einsatzkräfte befahrbare oder nicht befahrbare Flächen sind nur auf privaten Geländen darzustellen. Das öffentliche Straßenland ist im Regelfall unangetastet zu lassen.",
@@ -86,7 +86,23 @@
                 "GESCH",
                 "FERT",
                 "ANM"
-              ]
+              ],
+              "if": {
+                "properties": {
+                  "BEZ": {
+                    "enum": [
+                      "F106"
+                    ]
+                  }
+                }
+              },
+              "else": {
+                "properties": {
+                  "FERT": {
+                    "type": "null"
+                  }
+                }
+              }
             }
           },
           "required": [

@@ -20,7 +20,7 @@
         "ORT": "Berlin",
         "PLER": "HHP",
         "BTR": "Hauptbahnhof",
-        "ANM": "Weiteres Feuerwehrplanobjekt 170178 an derselben Adresse."
+        "ANM": "Weiteres FWP-Objekt 170178 an derselben Adresse."
       },
       "geometry": {
         "type": "Point",
@@ -42,7 +42,7 @@
         "ORT": "Berlin",
         "PLER": "HHP",
         "BTR": "Hauptbahnhof",
-        "ANM": "Weiteres Feuerwehrplanobjekt 170178 an derselben Adresse."
+        "ANM": "Weiteres FWP-Objekt 170178 an derselben Adresse."
       },
       "geometry": {
         "type": "Point",

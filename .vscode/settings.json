@@ -44,12 +44,6 @@
     },
     {
       "fileMatch": [
-        "/*_p_zufahrt_zugang.geojson"
-      ],
-      "url": ".schemas/p_zufahrt_zugang.schema.json"
-    },
-    {
-      "fileMatch": [
         "/*_p_sonstigesymbole.geojson"
       ],
       "url": ".schemas/p_sonstigesymbole.schema.json"

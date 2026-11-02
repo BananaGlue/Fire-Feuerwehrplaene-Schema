@@ -20,8 +20,7 @@
         "STO": "Raum 104.2",
         "MENG": "10",
         "SAB": 50,
-        "GFG": "27",
-        "ANM": "Hinter der Pforte links."
+        "GFG": "27"
       },
       "geometry": {
         "type": "Point",

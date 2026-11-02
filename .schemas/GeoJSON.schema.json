@@ -1,5 +1,5 @@
 {
-  "$id": "GeoJSON.schema.json",
+  "$id": "https://fireapp.io/GeoJSON.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$defs": {
     "GeoJsonObject": {
@@ -234,10 +234,17 @@
         },
         {
           "required": [
-            "coordinates"
+            "coordinates",
+            "type"
           ],
           "type": "object",
           "properties": {
+            "type": {
+              "type": "string",
+              "enum": [
+                "LineString"
+              ]
+            },
             "coordinates": {
               "$ref": "#/$defs/LineStringCoordinates"
             }
@@ -277,15 +284,23 @@
         },
         {
           "required": [
-            "coordinates"
+            "coordinates",
+            "type"
           ],
           "type": "object",
           "properties": {
+            "type": {
+              "type": "string",
+              "enum": [
+                "Polygon"
+              ]
+            },
             "coordinates": {
               "type": "array",
               "items": {
                 "$ref": "#/$defs/LinearRing"
-              }
+              },
+              "minItems": 1
             }
           }
         }

@@ -1,5 +1,5 @@
 {
-  "$id": "p_besonderegefahren.schema.json",
+  "$id": "https://fireapp.io/p_besonderegefahren.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "p_besonderegefahren",
   "description": "Umfasst Hinweise auf besondere Gefahren. Über die Bezeichnung wird die Art der Gefahr definiert über das Attribut „GEF“ wird die Gefahrenquelle definiert. Detailangaben zu Menge, Sicherheitsabstand und Gefahrengruppe sind bei Bedarf in Abhängigkeit zum jeweiligen Element zu wählen.",

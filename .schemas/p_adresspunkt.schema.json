@@ -1,5 +1,5 @@
 {
-  "$id": "p_adresspunkt.schema.json",
+  "$id": "https://fireapp.io/p_adresspunkt.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "p_adresspunkt",
   "description": "Dient der Hinterlegung von Daten zu Adresse, Betreiber und Planersteller. Die Platzierung soll an der straßenzugewandten Seite der (Haupt-) Gebäudefläche erfolgen.",

@@ -16,7 +16,7 @@
         "STN": "2026-06-18",
         "AKT": "2026-06-18",
         "DREH": 0,
-        "BESCH": 0,
+        "BESCH": null,
         "ANM": "Eine Anmerkung"
       },
       "geometry": {

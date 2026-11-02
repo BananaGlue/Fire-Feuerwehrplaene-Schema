@@ -1,5 +1,5 @@
 {
-  "$id": "p_zufahrt_zugang.schema.json",
+  "$id": "https://fireapp.io/p_zufahrt_zugang.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "p_zufahrt_zugang",
   "description": "Umfasst Daten zu den Zufahrtsmöglichkeiten für die Feuerwehr, sowie mögliche Beschränkungen, welche diese unterliegen. Zusätzlich werden hier Daten über die Gebäudezugänge erfasst. Bei der Platzierung von Zufahrten und Zugängen ist die Rotationsausrichtung anzufügen (s. Attribut „DREH“), um eine korrekte Ausrichtung einer Pfeil-Symbolisierung zu gewährleisten. Bei Beschränkungen ist Rotationsausrichtung obsolet.",
@@ -83,6 +83,49 @@
                 "DREH",
                 "BESCH",
                 "ANM"
+              ],
+              "allOf": [
+                {
+                  "if": {
+                    "properties": {
+                      "BEZ": {
+                        "enum": [
+                          "P204",
+                          "P205",
+                          "P206"
+                        ]
+                      }
+                    }
+                  },
+                  "then": {
+                    "properties": {
+                      "BESCH": {
+                        "type": "number"
+                      }
+                    }
+                  }
+                },
+                {
+                  "if": {
+                    "properties": {
+                      "BEZ": {
+                        "enum": [
+                          "P200",
+                          "P201",
+                          "P202",
+                          "P203"
+                        ]
+                      }
+                    }
+                  },
+                  "then": {
+                    "properties": {
+                      "DREH": {
+                        "type": "number"
+                      }
+                    }
+                  }
+                }
               ]
             }
           },
