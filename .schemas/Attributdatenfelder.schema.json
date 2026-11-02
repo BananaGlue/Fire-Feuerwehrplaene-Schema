@@ -5,164 +5,164 @@
   "$defs": {
     "BEZ": {
       "title": "Bezeichnung",
-      "description": "Die eindeutige vierstellige Kennung (X000) des Elements. Der Anfangsbuchstabe steht in Abhängigkeit der Geometrieform (Punkt = P, Linie = L, Fläche = F). Die Zahl setzt sich aus der Layernummer und der zweistelligen Elementnummerierung zusammen.",
+      "description": "Die eindeutige vierstellige Kennung (X000) des Elements. Der Anfangsbuchstabe steht in Abhängigkeit der Geometrieform (Punkt = P, Linie = L, Fläche = F). Die Zahl setzt sich aus der Layernummer und der zweistelligen Elementnummerierung zusammen.\n\nBeispiel: P102",
       "$ref": "Grunddatentypen.schema.json#/$defs/TrimmedString",
       "pattern": "^[PLF]\\d{3}$"
     },
     "FWPNR": {
       "title": "Feuerwehrplannummer",
-      "description": "Eindeutige Identifikationskennzeichnung des Feuerwehrplans, zur Zuordnung der einzelnen Elemente zu einem Plan. Der Aufbau der Feuerwehrplannummer wird durch die jeweilige Brandschutzdienststelle definiert und kann Zahlen, Buchstaben und Sonderzeichen enthalten.",
+      "description": "Eindeutige Identifikationskennzeichnung des Feuerwehrplans, zur Zuordnung der einzelnen Elemente zu einem Plan. Der Aufbau der Feuerwehrplannummer wird durch die jeweilige Brandschutzdienststelle definiert und kann Zahlen, Buchstaben und Sonderzeichen enthalten.\n\nBeispiel: FWP-00001",
       "$ref": "Grunddatentypen.schema.json#/$defs/TrimmedString"
     },
     "AKT": {
       "title": "Aktualisierung",
-      "description": "Datum der letzten Aktualisierung",
+      "description": "Datum der letzten Aktualisierung\n\nFormat: JJJJ-MM-TT. Beispiel: 2025-04-01",
       "$ref": "Grunddatentypen.schema.json#/$defs/Date"
     },
     "STN": {
       "title": "Stand",
-      "description": "Datum des Datenstands. Bei Aktualisierungen ohne Veränderung kann das Datum zum Datum der letzten Aktualisierung abweichen.",
+      "description": "Datum des Datenstands. Bei Aktualisierungen ohne Veränderung kann das Datum zum Datum der letzten Aktualisierung abweichen.\n\nFormat: JJJJ-MM-TT. Beispiel: 2021-09-23",
       "$ref": "Grunddatentypen.schema.json#/$defs/Date"
     },
     "STRHNR": {
       "title": "Straße HausNr.",
-      "description": "Straße und Hausnummer des Objekts. Der Straßenname und die Hausnummer sind mit einem Leerzeichen zu trennen, Hausnummernzusätze sind ohne Leerzeichen anzuhängen. Von Abkürzungen ist abzusehen.",
+      "description": "Straße und Hausnummer des Objekts. Der Straßenname und die Hausnummer sind mit einem Leerzeichen zu trennen, Hausnummernzusätze sind ohne Leerzeichen anzuhängen. Von Abkürzungen ist abzusehen.\n\nBeispiel: Feuerwehrstraße 1a",
       "$ref": "Grunddatentypen.schema.json#/$defs/NullableTrimmedString"
     },
     "PLZ": {
       "title": "Postleitzahl",
-      "description": "5-stellige Postleitzahl des Objekts.",
+      "description": "5-stellige Postleitzahl des Objekts.\n\nAls Zahl anzugeben, führende Nullen entfallen (01067 wird zu 1067). Beispiel: 60435",
       "$ref": "Grunddatentypen.schema.json#/$defs/NullablePLZInteger"
     },
     "ORT": {
       "title": "Ort",
-      "description": "Ortsname des Objektes.",
+      "description": "Ortsname des Objektes.\n\nBeispiel: Frankfurt am Main",
       "$ref": "Grunddatentypen.schema.json#/$defs/NullableTrimmedString"
     },
     "BTR": {
       "title": "Gebäudebetreiber",
-      "description": "(Firmen-)Name des Betreibers des Objekts, ohne Anschrift und Kontakt.",
+      "description": "(Firmen-)Name des Betreibers des Objekts, ohne Anschrift und Kontakt.\n\nBeispiel: Objekt-Betreiber GmbH",
       "$ref": "Grunddatentypen.schema.json#/$defs/NullableTrimmedString"
     },
     "PLER": {
       "title": "Planersteller",
-      "description": "Firmenname und Namenskürzel der erstellenden Person.",
+      "description": "Firmenname und Namenskürzel der erstellenden Person.\n\nBeispiel: Feuerwehrplan GmbH (FP)",
       "$ref": "Grunddatentypen.schema.json#/$defs/NullableTrimmedString"
     },
     "ANM": {
       "title": "Anmerkung",
-      "description": "Wichtige Anmerkungen, welche keinem anderen Feld zugeordnet werden können.",
+      "description": "Wichtige Anmerkungen, welche keinem anderen Feld zugeordnet werden können.\n\nMaximal 50 Zeichen.",
       "$ref": "Grunddatentypen.schema.json#/$defs/NullableTrimmedString",
       "maxLength": 50
     },
     "AUF": {
       "title": "Aufgeschaltet",
-      "description": "Deklaration ob die Brandmeldeanlage bei der Feuerwehr aufgeschaltet ist. Die Eintragung erfolgt über den Zahlenwert 1 (Wahr) oder 0 (Falsch).",
+      "description": "Deklaration ob die Brandmeldeanlage bei der Feuerwehr aufgeschaltet ist. Die Eintragung erfolgt über den Zahlenwert 1 (Wahr) oder 0 (Falsch).\n\nBeispiel: 1",
       "$ref": "Grunddatentypen.schema.json#/$defs/NullableIntegerBoolean"
     },
     "UGM": {
       "title": "UGM-Nummer",
-      "description": "Auch UE-Nummer. Eindeutige Kennung der Brandmeldeanlagen.",
+      "description": "Auch UE-Nummer. Eindeutige Kennung der Brandmeldeanlagen.\n\nBeispiel: 9281",
       "$ref": "Grunddatentypen.schema.json#/$defs/NullableNonNegativeInteger"
     },
     "PRIV": {
       "title": "Privat",
-      "description": "Deklaration ob die Brandmeldeanlage privat ist. Die Eintragung erfolgt über den Zahlenwert 1 (Wahr) oder 0 (Falsch).",
+      "description": "Deklaration ob die Brandmeldeanlage privat ist. Die Eintragung erfolgt über den Zahlenwert 1 (Wahr) oder 0 (Falsch).\n\nBeispiel: 1",
       "$ref": "Grunddatentypen.schema.json#/$defs/NullableIntegerBoolean"
     },
     "DREH": {
       "title": "Drehwinkel",
-      "description": "Dient der Ausrichtung des Richtungspfeils. Die Angabe erfolgt in Grad, wobei die Grunddrehung (0 Grad) auf arithmetisch Null festgelegt ist und die Drehung gegen den Uhrzeigersinn erfolgt.\n\nACHTUNG: Die Standardeinstellung von Grunddrehung und Drehrichtung ist programmspezifisch und kann abweichen. Die Eintragung sind zwingend nach dem oben genannten Prinzip vorzunehmen, auch wenn die Darstellung im GIS davon abweicht.",
+      "description": "Dient der Ausrichtung des Richtungspfeils. Die Angabe erfolgt in Grad, wobei die Grunddrehung (0 Grad) auf arithmetisch Null festgelegt ist und die Drehung gegen den Uhrzeigersinn erfolgt.\n\nACHTUNG: Die Standardeinstellung von Grunddrehung und Drehrichtung ist programmspezifisch und kann abweichen. Die Eintragung sind zwingend nach dem oben genannten Prinzip vorzunehmen, auch wenn die Darstellung im GIS davon abweicht.\n\nPflichtangabe bei P200 bis P203, bei Beschränkungen (P204 bis P206) obsolet. Wertebereich: 0 bis 360. Beispiel: 90",
       "$ref": "Grunddatentypen.schema.json#/$defs/NullableDegreeNumber"
     },
     "BESCH": {
       "title": "Beschränkung",
-      "description": "Beschränkungen welche eine Zufahrt unterliegt. Die Art der Beschränkung ergibt sich aus der Bezeichnung.\nP204 = Durchfahrtshöhe in Metern\nP205 = Durchfahrtsbreite in Metern\nP206 = zulässige Gesamtmasse in Tonnen.\nDie Angabe ist auf eine Nachkommastelle genau zu erfassen.",
+      "description": "Beschränkungen welche eine Zufahrt unterliegt. Die Art der Beschränkung ergibt sich aus der Bezeichnung.\nP204 = Durchfahrtshöhe in Metern\nP205 = Durchfahrtsbreite in Metern\nP206 = zulässige Gesamtmasse in Tonnen.\nDie Angabe ist auf eine Nachkommastelle genau zu erfassen.\n\nPflichtangabe bei P204 bis P206. Der Wert muss größer als 0 sein. Beispiel: 3.5",
       "$ref": "Grunddatentypen.schema.json#/$defs/NullablePositiveNumber"
     },
     "DN": {
       "title": "Nenndurchmesser",
-      "description": "Nenndurchmesser (DN) eines Hydranten bzw. der zugrunde liegenden Leitung gemäß Hydrantenschild, in mm.",
+      "description": "Nenndurchmesser (DN) eines Hydranten bzw. der zugrunde liegenden Leitung gemäß Hydrantenschild, in mm.\n\nDer Wert muss größer als 0 sein. Beispiel: 100",
       "$ref": "Grunddatentypen.schema.json#/$defs/NullablePositiveInteger"
     },
     "ENT": {
       "title": "Entnahmemenge",
-      "description": "Entnahmemenge in m³",
+      "description": "Entnahmemenge in m³\n\nDer Wert muss größer als 0 sein. Beispiel: 100",
       "$ref": "Grunddatentypen.schema.json#/$defs/NullablePositiveInteger"
     },
     "OEF": {
       "title": "Oeffentlich",
-      "description": "Deklaration ob die Anlage der Löschwasserversorgung auf öffentlichem Straßenland verortet ist. Die Eintragung erfolgt über den Zahlenwert 1 (Wahr) oder 0 (Falsch).",
+      "description": "Deklaration ob die Anlage der Löschwasserversorgung auf öffentlichem Straßenland verortet ist. Die Eintragung erfolgt über den Zahlenwert 1 (Wahr) oder 0 (Falsch).\n\nBeispiel: 1",
       "$ref": "Grunddatentypen.schema.json#/$defs/NullableIntegerBoolean"
     },
     "GESCH": {
       "title": "Geschoss",
-      "description": "Geschossbezeichnung nach DIN 14095 Abschnitt 6.6",
+      "description": "Geschossbezeichnung nach DIN 14095 Abschnitt 6.6\n\nBeispiel: E",
       "$ref": "Grunddatentypen.schema.json#/$defs/NullableTrimmedString"
     },
     "EIN": {
       "title": "Einspeisung",
-      "description": "Angabe des Zielorts der Einspeisung.",
+      "description": "Angabe des Zielorts der Einspeisung.\n\nBeispiel: TR 8",
       "$ref": "Grunddatentypen.schema.json#/$defs/NullableTrimmedString"
     },
     "STO": {
       "title": "Standort",
-      "description": "Standort des Elements anhand eines Raumnamens oder einer Raumnummer. Das Feld kann Zahlen, Buchstaben und Sonderzeichen enthalten.",
+      "description": "Standort des Elements anhand eines Raumnamens oder einer Raumnummer. Das Feld kann Zahlen, Buchstaben und Sonderzeichen enthalten.\n\nBeispiel: 2.204",
       "$ref": "Grunddatentypen.schema.json#/$defs/NullableTrimmedString"
     },
     "HAUPT": {
       "title": "Hauptschalter",
-      "description": "Angabe der Zielanlage, für welche der Hauptschalter vorgesehen ist.",
+      "description": "Angabe der Zielanlage, für welche der Hauptschalter vorgesehen ist.\n\nBeispiel: Heizung",
       "$ref": "Grunddatentypen.schema.json#/$defs/NullableTrimmedString"
     },
     "PVS": {
       "title": "PV-Speicher",
-      "description": "Deklaration ob die PV-Anlage einen Speicher besitzt. Die Eintragung erfolgt über den Zahlenwert 1 (Wahr) oder 0 (Falsch).",
+      "description": "Deklaration ob die PV-Anlage einen Speicher besitzt. Die Eintragung erfolgt über den Zahlenwert 1 (Wahr) oder 0 (Falsch).\n\nBeispiel: 1",
       "$ref": "Grunddatentypen.schema.json#/$defs/NullableIntegerBoolean"
     },
     "FWK": {
       "title": "Feuerwiderstandsklasse",
-      "description": "Angabe der Feuerwiderstandsklasse nach DIN 4102 (z.B. 30, 90, 30S, 90S) mit vorangestellten Kürzel F oder T.",
+      "description": "Angabe der Feuerwiderstandsklasse nach DIN 4102 (z.B. 30, 90, 30S, 90S) mit vorangestellten Kürzel F oder T.\n\nBeispiele: F30S, T90",
       "$ref": "Grunddatentypen.schema.json#/$defs/NullableTrimmedString"
     },
     "KEN": {
       "title": "Kennzeichnung",
-      "description": "Bezeichnung eines Treppenraums oder des Aufzugs.",
+      "description": "Bezeichnung eines Treppenraums oder des Aufzugs.\n\nBeispiel: TR 01",
       "$ref": "Grunddatentypen.schema.json#/$defs/NullableTrimmedString"
     },
     "GESCHU": {
       "title": "unterstes Geschoss",
-      "description": "Geschossbezeichnung nach DIN 14095 Abschnitt 6.6",
+      "description": "Geschossbezeichnung nach DIN 14095 Abschnitt 6.6\n\nBeispiel: -3",
       "$ref": "Grunddatentypen.schema.json#/$defs/NullableTrimmedString"
     },
     "GESCHO": {
       "title": "oberstes Geschoss",
-      "description": "Geschossbezeichnung nach DIN 14095 Abschnitt 6.6",
+      "description": "Geschossbezeichnung nach DIN 14095 Abschnitt 6.6\n\nBeispiel: +12",
       "$ref": "Grunddatentypen.schema.json#/$defs/NullableTrimmedString"
     },
     "MENG": {
       "title": "Menge",
-      "description": "Menge des Gefahrstoffs inklusive Kurzbezeichnung der Einheit. Die Einheit ist dabei mit einem Leerzeichen von der Zahl zu trennen.",
+      "description": "Menge des Gefahrstoffs inklusive Kurzbezeichnung der Einheit. Die Einheit ist dabei mit einem Leerzeichen von der Zahl zu trennen.\n\nBeispiel: 100 kg",
       "$ref": "Grunddatentypen.schema.json#/$defs/NullableTrimmedString"
     },
     "SAB": {
       "title": "Sicherheitsabstand",
-      "description": "Notwendiger Sicherheitsabstand in Metern.",
+      "description": "Notwendiger Sicherheitsabstand in Metern.\n\nBeispiel: 5",
       "$ref": "Grunddatentypen.schema.json#/$defs/NullableNonNegativeInteger"
     },
     "GFG": {
       "title": "Gefahrengruppe",
-      "description": "Bezeichnung der Gefahrengruppe nach FwDV 500 mit Unterscheidung zwischen radioaktiv (A), biologisch (B) und chemisch (C).",
+      "description": "Bezeichnung der Gefahrengruppe nach FwDV 500 mit Unterscheidung zwischen radioaktiv (A), biologisch (B) und chemisch (C).\n\nBeispiel: IIA",
       "$ref": "Grunddatentypen.schema.json#/$defs/NullableTrimmedString"
     },
     "GEF": {
       "title": "Gefahr",
-      "description": "Bezeichnung der Gefahrenquelle",
+      "description": "Bezeichnung der Gefahrenquelle\n\nBeispiel: Trafo",
       "$ref": "Grunddatentypen.schema.json#/$defs/NullableTrimmedString"
     },
     "FERT": {
       "title": "Fertigstellung",
-      "description": "Datum der geplanten Fertigstellung. Bezieht sich nur auf die Fläche einer Baustelle (F106).",
+      "description": "Datum der geplanten Fertigstellung. Bezieht sich nur auf die Fläche einer Baustelle (F106).\n\nFormat: JJJJ-MM-TT. Bei allen anderen Elementen ist der Wert null. Beispiel: 2021-09-23",
       "$ref": "Grunddatentypen.schema.json#/$defs/NullableDate"
     }
   }

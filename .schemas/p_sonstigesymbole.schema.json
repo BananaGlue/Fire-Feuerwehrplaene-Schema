@@ -15,10 +15,14 @@
           "type": "object",
           "properties": {
             "name": {
+              "title": "Ebenenname",
+              "description": "Name der Ebene p_sonstigesymbole, optional mit Präfix. QGIS schreibt hier den Dateinamen, z. B. 170174_p_sonstigesymbole.",
               "type": "string",
               "pattern": "^(.+_)?p_sonstigesymbole$"
             },
             "features": {
+              "title": "Elemente der Ebene p_sonstigesymbole",
+              "description": "Bietet die Möglichkeit besondere Elemente, welche über die Liste nicht vordefiniert sind einzufügen und ist optional.",
               "type": "array",
               "items": {
                 "$ref": "#/$defs/SonstigeSymbolePointFeature"
@@ -32,7 +36,9 @@
       ]
     },
     "SonstigeSymbolePointBEZ": {
-      "$ref": "Attributdatenfelder.schema.json#/$defs/BEZ",
+      "title": "Bezeichnung",
+      "description": "Kennung für besondere Elemente, die über die Liste nicht vordefiniert sind: P700 bis P799.\n\nBeispiel: P700",
+      "type": "string",
       "pattern": "^P7\\d{2}$"
     },
     "SonstigeSymbolePointFeature": {
@@ -44,6 +50,8 @@
           "type": "object",
           "properties": {
             "properties": {
+              "title": "Attribute",
+              "description": "Fachattribute des Elements. Alle Felder müssen vorhanden sein. Kann ein Fachattribut nicht gefüllt werden, ist es leer zu lassen (null), von Platzhaltern ist abzusehen.",
               "type": "object",
               "properties": {
                 "BEZ": {

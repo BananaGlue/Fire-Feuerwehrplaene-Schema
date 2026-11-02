@@ -15,10 +15,14 @@
           "type": "object",
           "properties": {
             "name": {
+              "title": "Ebenenname",
+              "description": "Name der Ebene p_vorbeugenderbaulicherbrandschutz, optional mit Präfix. QGIS schreibt hier den Dateinamen, z. B. 170174_p_vorbeugenderbaulicherbrandschutz.",
               "type": "string",
               "pattern": "^(.+_)?p_vorbeugenderbaulicherbrandschutz$"
             },
             "features": {
+              "title": "Elemente der Ebene p_vorbeugenderbaulicherbrandschutz",
+              "description": "Umfasst Daten zu Anlagen des vorbeugenden Baulichen Brandschutzes. Die Notwendigkeit zur Befüllung der einzelnen Fachattribute ist in Abhängigkeit zur jeweiligen Einrichtung zu wählen. Der Elementtyp „Brandwand“ und „Komplextrennwand“ sind mittig zu platzieren. Der genaue Verlauf dieser Elemente ist im Linien-Layer l_vorbeugenderBaulicherBrandschutz zu versorgen.",
               "type": "array",
               "items": {
                 "$ref": "#/$defs/VorbeugenderBaulicherBrandschutzPointFeature"
@@ -169,6 +173,8 @@
           "type": "object",
           "properties": {
             "properties": {
+              "title": "Attribute",
+              "description": "Fachattribute des Elements. Alle Felder müssen vorhanden sein. Kann ein Fachattribut nicht gefüllt werden, ist es leer zu lassen (null), von Platzhaltern ist abzusehen.",
               "type": "object",
               "properties": {
                 "BEZ": {

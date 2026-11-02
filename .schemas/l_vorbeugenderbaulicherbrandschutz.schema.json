@@ -15,10 +15,14 @@
           "type": "object",
           "properties": {
             "name": {
+              "title": "Ebenenname",
+              "description": "Name der Ebene l_vorbeugenderbaulicherbrandschutz, optional mit Präfix. QGIS schreibt hier den Dateinamen, z. B. 170174_l_vorbeugenderbaulicherbrandschutz.",
               "type": "string",
               "pattern": "^(.+_)?l_vorbeugenderbaulicherbrandschutz$"
             },
             "features": {
+              "title": "Elemente der Ebene l_vorbeugenderbaulicherbrandschutz",
+              "description": "Umfasst Elemente mit einer linienförmigen Ausprägung und wird z.T. in Kombination mit Elementen aus punktförmiger Darstellung verwendet.",
               "type": "array",
               "items": {
                 "$ref": "#/$defs/VorbeugenderBaulicherBrandschutzLineFeature"
@@ -53,6 +57,8 @@
           "type": "object",
           "properties": {
             "properties": {
+              "title": "Attribute",
+              "description": "Fachattribute des Elements. Alle Felder müssen vorhanden sein. Kann ein Fachattribut nicht gefüllt werden, ist es leer zu lassen (null), von Platzhaltern ist abzusehen.",
               "type": "object",
               "properties": {
                 "BEZ": {

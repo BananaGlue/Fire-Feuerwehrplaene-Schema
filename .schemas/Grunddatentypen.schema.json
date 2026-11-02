@@ -76,24 +76,34 @@
       "type": "object",
       "properties": {
         "type": {
+          "title": "Typ",
+          "description": "GeoJSON-Objekttyp der Datei. Immer \"FeatureCollection\".",
           "type": "string",
           "enum": [
             "FeatureCollection"
           ]
         },
         "crs": {
+          "title": "Koordinatenbezugssystem",
+          "description": "Pflichtangabe. Legt fest, wie die Koordinaten der Datei zu lesen sind. Nach vfdb TB 07-01 sind die Daten in ETRS89 / UTM Zone 32 (EPSG:25832) bzw. Zone 33 (EPSG:25833) bereitzustellen.",
           "type": "object",
           "properties": {
             "type": {
+              "title": "CRS-Typ",
+              "description": "Art der CRS-Angabe. Immer \"name\".",
               "type": "string",
               "enum": [
                 "name"
               ]
             },
             "properties": {
+              "title": "CRS-Eigenschaften",
+              "description": "Enthält den Namen des Koordinatenbezugssystems.",
               "type": "object",
               "properties": {
                 "name": {
+                  "title": "CRS-Name",
+                  "description": "Kennung des Koordinatenbezugssystems. Die URN- und die Kurzform von EPSG:25832 und EPSG:25833 sind gleichwertig.",
                   "type": "string",
                   "enum": [
                     "urn:ogc:def:crs:OGC:1.3:CRS84",
@@ -101,6 +111,13 @@
                     "urn:ogc:def:crs:EPSG::25833",
                     "EPSG:25832",
                     "EPSG:25833"
+                  ],
+                  "enumDescriptions": [
+                    "WGS 84, Länge/Breite in Dezimalgrad",
+                    "ETRS89 / UTM Zone 32, Ost-/Nordwert in Metern",
+                    "ETRS89 / UTM Zone 33, Ost-/Nordwert in Metern",
+                    "ETRS89 / UTM Zone 32, Ost-/Nordwert in Metern (Kurzform)",
+                    "ETRS89 / UTM Zone 33, Ost-/Nordwert in Metern (Kurzform)"
                   ]
                 }
               },
@@ -124,6 +141,8 @@
       "type": "object",
       "properties": {
         "type": {
+          "title": "Typ",
+          "description": "GeoJSON-Objekttyp eines Elements. Immer \"Feature\".",
           "type": "string",
           "enum": [
             "Feature"
@@ -142,6 +161,8 @@
       "type": "object",
       "properties": {
         "type": {
+          "title": "Typ",
+          "description": "GeoJSON-Objekttyp eines Elements. Immer \"Feature\".",
           "type": "string",
           "enum": [
             "Feature"
@@ -160,6 +181,8 @@
       "type": "object",
       "properties": {
         "type": {
+          "title": "Typ",
+          "description": "GeoJSON-Objekttyp eines Elements. Immer \"Feature\".",
           "type": "string",
           "enum": [
             "Feature"

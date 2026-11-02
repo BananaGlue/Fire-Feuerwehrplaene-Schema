@@ -15,10 +15,14 @@
           "type": "object",
           "properties": {
             "name": {
+              "title": "Ebenenname",
+              "description": "Name der Ebene l_feuerwehrzufahrten, optional mit Präfix. QGIS schreibt hier den Dateinamen, z. B. 170174_l_feuerwehrzufahrten.",
               "type": "string",
               "pattern": "^(.+_)?l_feuerwehrzufahrten$"
             },
             "features": {
+              "title": "Elemente der Ebene l_feuerwehrzufahrten",
+              "description": "Umfasst Elemente mit einer linienförmigen Ausprägung und wird in Kombination mit Elementen aus punktförmiger Darstellung verwendet. Hierbei können die geplanten Fahrwege z.B. zu Anleiterstellen auf dem Gelände dargestellt werden.",
               "type": "array",
               "items": {
                 "$ref": "#/$defs/FeuerwehrzufahrtenLineFeature"
@@ -51,6 +55,8 @@
           "type": "object",
           "properties": {
             "properties": {
+              "title": "Attribute",
+              "description": "Fachattribute des Elements. Alle Felder müssen vorhanden sein. Kann ein Fachattribut nicht gefüllt werden, ist es leer zu lassen (null), von Platzhaltern ist abzusehen.",
               "type": "object",
               "properties": {
                 "BEZ": {

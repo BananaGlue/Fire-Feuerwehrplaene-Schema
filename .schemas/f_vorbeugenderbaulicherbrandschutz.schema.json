@@ -15,10 +15,14 @@
           "type": "object",
           "properties": {
             "name": {
+              "title": "Ebenenname",
+              "description": "Name der Ebene f_vorbeugenderbaulicherbrandschutz, optional mit Präfix. QGIS schreibt hier den Dateinamen, z. B. 170174_f_vorbeugenderbaulicherbrandschutz.",
               "type": "string",
               "pattern": "^(.+_)?f_vorbeugenderbaulicherbrandschutz$"
             },
             "features": {
+              "title": "Elemente der Ebene f_vorbeugenderbaulicherbrandschutz",
+              "description": "Umfasst Elemente mit einer flächenhaften Ausprägung. Sie können in Kombination mit Elementen aus punkförmiger Darstellung auftreten.\nFür Einsatzkräfte befahrbare oder nicht befahrbare Flächen sind nur auf privaten Geländen darzustellen. Das öffentliche Straßenland ist im Regelfall unangetastet zu lassen.",
               "type": "array",
               "items": {
                 "$ref": "#/$defs/VorbeugenderBaulicherBrandschutzPolygonFeature"
@@ -67,6 +71,8 @@
           "type": "object",
           "properties": {
             "properties": {
+              "title": "Attribute",
+              "description": "Fachattribute des Elements. Alle Felder müssen vorhanden sein. Kann ein Fachattribut nicht gefüllt werden, ist es leer zu lassen (null), von Platzhaltern ist abzusehen.",
               "type": "object",
               "properties": {
                 "BEZ": {

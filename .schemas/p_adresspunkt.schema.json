@@ -15,10 +15,14 @@
           "type": "object",
           "properties": {
             "name": {
+              "title": "Ebenenname",
+              "description": "Name der Ebene p_adresspunkt, optional mit Präfix. QGIS schreibt hier den Dateinamen, z. B. 170174_p_adresspunkt.",
               "type": "string",
               "pattern": "^(.+_)?p_adresspunkt$"
             },
             "features": {
+              "title": "Elemente der Ebene p_adresspunkt",
+              "description": "Dient der Hinterlegung von Daten zu Adresse, Betreiber und Planersteller. Die Platzierung soll an der straßenzugewandten Seite der (Haupt-) Gebäudefläche erfolgen.",
               "type": "array",
               "items": {
                 "$ref": "#/$defs/AdresspunktPointFeature"
@@ -49,6 +53,8 @@
           "type": "object",
           "properties": {
             "properties": {
+              "title": "Attribute",
+              "description": "Fachattribute des Elements. Alle Felder müssen vorhanden sein. Kann ein Fachattribut nicht gefüllt werden, ist es leer zu lassen (null), von Platzhaltern ist abzusehen.",
               "type": "object",
               "properties": {
                 "BEZ": {

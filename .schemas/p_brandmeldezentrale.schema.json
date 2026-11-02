@@ -15,10 +15,14 @@
           "type": "object",
           "properties": {
             "name": {
+              "title": "Ebenenname",
+              "description": "Name der Ebene p_brandmeldezentrale, optional mit Präfix. QGIS schreibt hier den Dateinamen, z. B. 170174_p_brandmeldezentrale.",
               "type": "string",
               "pattern": "^(.+_)?p_brandmeldezentrale$"
             },
             "features": {
+              "title": "Elemente der Ebene p_brandmeldezentrale",
+              "description": "Enthält Daten zur Brandmeldezentrale.",
               "type": "array",
               "items": {
                 "$ref": "#/$defs/BrandmeldezentralePointFeature"
@@ -49,6 +53,8 @@
           "type": "object",
           "properties": {
             "properties": {
+              "title": "Attribute",
+              "description": "Fachattribute des Elements. Alle Felder müssen vorhanden sein. Kann ein Fachattribut nicht gefüllt werden, ist es leer zu lassen (null), von Platzhaltern ist abzusehen.",
               "type": "object",
               "properties": {
                 "BEZ": {

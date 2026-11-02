@@ -15,10 +15,14 @@
           "type": "object",
           "properties": {
             "name": {
+              "title": "Ebenenname",
+              "description": "Name der Ebene p_besonderegefahren, optional mit Präfix. QGIS schreibt hier den Dateinamen, z. B. 170174_p_besonderegefahren.",
               "type": "string",
               "pattern": "^(.+_)?p_besonderegefahren$"
             },
             "features": {
+              "title": "Elemente der Ebene p_besonderegefahren",
+              "description": "Umfasst Hinweise auf besondere Gefahren. Über die Bezeichnung wird die Art der Gefahr definiert über das Attribut „GEF“ wird die Gefahrenquelle definiert. Detailangaben zu Menge, Sicherheitsabstand und Gefahrengruppe sind bei Bedarf in Abhängigkeit zum jeweiligen Element zu wählen.",
               "type": "array",
               "items": {
                 "$ref": "#/$defs/BesondereGefahrenPointFeature"
@@ -83,6 +87,8 @@
           "type": "object",
           "properties": {
             "properties": {
+              "title": "Attribute",
+              "description": "Fachattribute des Elements. Alle Felder müssen vorhanden sein. Kann ein Fachattribut nicht gefüllt werden, ist es leer zu lassen (null), von Platzhaltern ist abzusehen.",
               "type": "object",
               "properties": {
                 "BEZ": {
