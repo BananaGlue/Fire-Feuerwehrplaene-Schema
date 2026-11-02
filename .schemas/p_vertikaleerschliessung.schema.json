@@ -1,5 +1,5 @@
 {
-  "$id": "https://fireapp.io/p_vertikaleerschliessung.schema.json",
+  "$id": "https://fireapp.io/tb-07-01/2026-01/p_vertikaleerschliessung.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "p_vertikaleerschliessung",
   "description": "Dient der Darstellung von Elementen der vertikalen Erschließung eines Gebäudes.",

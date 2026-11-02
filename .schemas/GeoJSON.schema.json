@@ -1,5 +1,5 @@
 {
-  "$id": "https://fireapp.io/GeoJSON.schema.json",
+  "$id": "https://fireapp.io/tb-07-01/2026-01/GeoJSON.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$defs": {
     "GeoJsonObject": {
@@ -11,15 +11,9 @@
         "type": {
           "type": "string",
           "enum": [
-            "Feature",
-            "FeatureCollection",
             "Point",
-            "MultiPoint",
             "LineString",
-            "MultiLineString",
-            "Polygon",
-            "MultiPolygon",
-            "GeometryCollection"
+            "Polygon"
           ]
         },
         "bbox": {
@@ -30,122 +24,8 @@
           }
         }
       },
-      "description": "GeoJSON object\nThe coordinate reference system for all GeoJSON coordinates is a geographic coordinate reference system, using the World Geodetic System 1984 (WGS 84) datum, with longitude and latitude units of decimal degrees. This is equivalent to the coordinate reference system identified by the Open Geospatial Consortium (OGC) URN An OPTIONAL third-position element SHALL be the height in meters above or below the WGS 84 reference ellipsoid. In the absence of elevation values, applications sensitive to height or depth SHOULD interpret positions as being at local ground or sea level.\n",
+      "description": "GeoJSON object\nThe coordinate reference system is declared by the required \"crs\" member of the FeatureCollection: ETRS89 / UTM zone 32N (EPSG:25832) or zone 33N (EPSG:25833) with easting and northing in meters, as required by vfdb TB 07-01, or WGS 84 (CRS84) with longitude and latitude in decimal degrees. This deliberately differs from RFC 7946, which allows WGS 84 only. An optional third position element is allowed but not needed, because vfdb TB 07-01 plans are created in 2D.\n",
       "$comment": "https://tools.ietf.org/html/rfc7946#section-3"
-    },
-    "Geometry": {
-      "description": "Abstract type for all GeoJSON object except Feature and FeatureCollection\n",
-      "$comment": "https://tools.ietf.org/html/rfc7946#section-3",
-      "allOf": [
-        {
-          "$ref": "#/$defs/GeoJsonObject"
-        },
-        {
-          "required": [
-            "type"
-          ],
-          "type": "object",
-          "properties": {
-            "type": {
-              "type": "string",
-              "enum": [
-                "Point",
-                "MultiPoint",
-                "LineString",
-                "MultiLineString",
-                "Polygon",
-                "MultiPolygon",
-                "GeometryCollection"
-              ]
-            }
-          }
-        }
-      ]
-    },
-    "GeometryElement": {
-      "description": "Abstract type for all GeoJSON 'Geometry' object the type of which is not 'GeometryCollection'\n",
-      "$comment": "https://tools.ietf.org/html/rfc7946#section-3",
-      "allOf": [
-        {
-          "$ref": "#/$defs/Geometry"
-        },
-        {
-          "required": [
-            "type"
-          ],
-          "type": "object",
-          "properties": {
-            "type": {
-              "type": "string",
-              "enum": [
-                "Point",
-                "MultiPoint",
-                "LineString",
-                "MultiLineString",
-                "Polygon",
-                "MultiPolygon"
-              ]
-            }
-          }
-        }
-      ]
-    },
-    "Feature": {
-      "description": "GeoJSON 'Feature' object",
-      "$comment": "https://tools.ietf.org/html/rfc7946#section-3.2",
-      "allOf": [
-        {
-          "$ref": "#/$defs/GeoJsonObject"
-        },
-        {
-          "required": [
-            "geometry",
-            "properties"
-          ],
-          "type": "object",
-          "properties": {
-            "geometry": {
-              "$ref": "#/$defs/Geometry"
-            },
-            "properties": {
-              "type": "object"
-            },
-            "id": {
-              "oneOf": [
-                {
-                  "type": "number"
-                },
-                {
-                  "type": "string"
-                }
-              ]
-            }
-          }
-        }
-      ]
-    },
-    "FeatureCollection": {
-      "description": "GeoJSON 'FeatureCollection' object",
-      "$comment": "https://tools.ietf.org/html/rfc7946#section-3.3",
-      "allOf": [
-        {
-          "$ref": "#/$defs/GeoJsonObject"
-        },
-        {
-          "required": [
-            "features"
-          ],
-          "type": "object",
-          "properties": {
-            "features": {
-              "type": "array",
-              "items": {
-                "$ref": "#/$defs/Feature"
-              }
-            }
-          }
-        }
-      ]
     },
     "Position": {
       "maxItems": 3,
@@ -180,7 +60,7 @@
       "$comment": "https://tools.ietf.org/html/rfc7946#section-3.1.2",
       "allOf": [
         {
-          "$ref": "#/$defs/GeometryElement"
+          "$ref": "#/$defs/GeoJsonObject"
         },
         {
           "required": [
@@ -202,35 +82,12 @@
         }
       ]
     },
-    "MultiPoint": {
-      "description": "GeoJSON geometry",
-      "$comment": "https://tools.ietf.org/html/rfc7946#section-3.1.3",
-      "allOf": [
-        {
-          "$ref": "#/$defs/GeometryElement"
-        },
-        {
-          "required": [
-            "coordinates"
-          ],
-          "type": "object",
-          "properties": {
-            "coordinates": {
-              "type": "array",
-              "items": {
-                "$ref": "#/$defs/Position"
-              }
-            }
-          }
-        }
-      ]
-    },
     "LineString": {
       "description": "GeoJSON geometry",
       "$comment": "https://tools.ietf.org/html/rfc7946#section-3.1.4",
       "allOf": [
         {
-          "$ref": "#/$defs/GeometryElement"
+          "$ref": "#/$defs/GeoJsonObject"
         },
         {
           "required": [
@@ -252,35 +109,12 @@
         }
       ]
     },
-    "MultiLineString": {
-      "description": "GeoJSON geometry",
-      "$comment": "https://tools.ietf.org/html/rfc7946#section-3.1.5",
-      "allOf": [
-        {
-          "$ref": "#/$defs/GeometryElement"
-        },
-        {
-          "required": [
-            "coordinates"
-          ],
-          "type": "object",
-          "properties": {
-            "coordinates": {
-              "type": "array",
-              "items": {
-                "$ref": "#/$defs/LineStringCoordinates"
-              }
-            }
-          }
-        }
-      ]
-    },
     "Polygon": {
       "description": "GeoJSON geometry",
       "$comment": "https://tools.ietf.org/html/rfc7946#section-3.1.6",
       "allOf": [
         {
-          "$ref": "#/$defs/GeometryElement"
+          "$ref": "#/$defs/GeoJsonObject"
         },
         {
           "required": [
@@ -301,57 +135,6 @@
                 "$ref": "#/$defs/LinearRing"
               },
               "minItems": 1
-            }
-          }
-        }
-      ]
-    },
-    "MultiPolygon": {
-      "description": "GeoJSON geometry",
-      "$comment": "https://tools.ietf.org/html/rfc7946#section-3.1.7",
-      "allOf": [
-        {
-          "$ref": "#/$defs/GeometryElement"
-        },
-        {
-          "required": [
-            "coordinates"
-          ],
-          "type": "object",
-          "properties": {
-            "coordinates": {
-              "type": "array",
-              "items": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/$defs/LinearRing"
-                }
-              }
-            }
-          }
-        }
-      ]
-    },
-    "GeometryCollection": {
-      "type": "object",
-      "description": "GeoJSON geometry collection\nGeometryCollections composed of a single part or a number of parts of a single type SHOULD be avoided when that single part or a single object of multipart type (MultiPoint, MultiLineString, or MultiPolygon) could be used instead.\n",
-      "$comment": "https://tools.ietf.org/html/rfc7946#section-3.1.8",
-      "allOf": [
-        {
-          "$ref": "#/$defs/Geometry"
-        },
-        {
-          "required": [
-            "geometries"
-          ],
-          "type": "object",
-          "properties": {
-            "geometries": {
-              "minItems": 0,
-              "type": "array",
-              "items": {
-                "$ref": "#/$defs/GeometryElement"
-              }
             }
           }
         }

@@ -1,5 +1,5 @@
 {
-  "$id": "https://fireapp.io/Grunddatentypen.schema.json",
+  "$id": "https://fireapp.io/tb-07-01/2026-01/Grunddatentypen.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$defs": {
     "TrimmedString": {
