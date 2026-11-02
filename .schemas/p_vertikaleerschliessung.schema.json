@@ -1,108 +1,103 @@
 {
+  "$id": "p_vertikaleerschliessung.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://fireapp.io/p_vertikaleerschliessung.schema.json",
   "title": "p_vertikaleerschliessung",
   "description": "Dient der Darstellung von Elementen der vertikalen Erschließung eines Gebäudes.",
-  "type": "object",
-  "properties": {
-    "type": {
-      "type": "string",
-      "enum": [
-        "FeatureCollection"
-      ]
-    },
-    "features": {
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/VertikaleErschliessungPointFeature"
-      }
-    }
-  },
-  "required": [
-    "type",
-    "features"
-  ],
+  "$ref": "#/$defs/VertikaleErschliessungPointFeatureCollection",
   "$defs": {
-    "VertikaleErschliessungPointFeature": {
-      "type": "object",
-      "properties": {
-        "type": {
-          "type": "string",
-          "enum": [
-            "Feature"
-          ]
+    "VertikaleErschliessungPointFeatureCollection": {
+      "allOf": [
+        {
+          "$ref": "Grunddatentypen.schema.json#/$defs/FeatureCollection"
         },
-        "geometry": {
-          "oneOf": [
-            {
-              "$ref": "GeoJSON.schema.json#/$defs/Point"
-            }
-          ]
-        },
-        "properties": {
+        {
           "type": "object",
           "properties": {
-            "BEZ": {
-              "description": "Bezeichnung",
+            "title": {
               "type": "string",
               "enum": [
-                "P500",
-                "P501",
-                "P502",
-                "P503",
-                "P504",
-                "P505",
-                "P506",
-                "P507"
+                "p_vertikaleerschliessung"
               ]
             },
-            "FWPNR": {
-              "description": "Feuerwehrplannummer",
-              "$ref": "GeoJSON.schema.json#/$defs/TrimmedString"
-            },
-            "STN": {
-              "description": "Stand",
-              "type": "string",
-              "format": "date"
-            },
-            "AKT": {
-              "description": "Aktualisierung",
-              "type": "string",
-              "format": "date"
-            },
-            "KEN": {
-              "description": "Kennzeichnung",
-              "$ref": "GeoJSON.schema.json#/$defs/TrimmedString"
-            },
-            "GESCHU": {
-              "description": "unterstes Geschoss",
-              "$ref": "GeoJSON.schema.json#/$defs/TrimmedString"
-            },
-            "GESCHO": {
-              "description": "oberstes Geschoss",
-              "$ref": "GeoJSON.schema.json#/$defs/TrimmedString"
-            },
-            "ANM": {
-              "description": "Anmerkung",
-              "$ref": "GeoJSON.schema.json#/$defs/TrimmedString"
+            "features": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/VertikaleErschliessungPointFeature"
+              }
             }
           },
           "required": [
-            "BEZ",
-            "FWPNR",
-            "STN",
-            "AKT",
-            "KEN",
-            "GESCHU",
-            "GESCHO",
-            "ANM"
+            "title",
+            "features"
           ]
         }
-      },
-      "required": [
-        "type",
-        "geometry",
-        "properties"
+      ]
+    },
+    "VertikaleErschliessungPointBEZ": {
+      "$ref": "Attributdatenfelder.schema.json#/$defs/BEZ",
+      "enum": [
+        "P500",
+        "P501",
+        "P502",
+        "P503",
+        "P504",
+        "P505",
+        "P506",
+        "P507"
+      ]
+    },
+    "VertikaleErschliessungPointFeature": {
+      "allOf": [
+        {
+          "$ref": "Grunddatentypen.schema.json#/$defs/PolygonFeature"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "BEZ": {
+                  "$ref": "#/$defs/VertikaleErschliessungPointBEZ"
+                },
+                "FWPNR": {
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/FWPNR"
+                },
+                "STN": {
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/STN"
+                },
+                "AKT": {
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/AKT"
+                },
+                "KEN": {
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/KEN"
+                },
+                "GESCHU": {
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/GESCHU"
+                },
+                "GESCHO": {
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/GESCHO"
+                },
+                "ANM": {
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/ANM"
+                }
+              },
+              "required": [
+                "BEZ",
+                "FWPNR",
+                "STN",
+                "AKT",
+                "KEN",
+                "GESCHU",
+                "GESCHO",
+                "ANM"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        }
       ]
     }
   }

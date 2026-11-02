@@ -1,107 +1,98 @@
 {
+  "$id": "p_zufahrt_zugang.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://fireapp.io/p_zufahrt_zugang.schema.json",
   "title": "p_zufahrt_zugang",
   "description": "Umfasst Daten zu den Zufahrtsmöglichkeiten für die Feuerwehr, sowie mögliche Beschränkungen, welche diese unterliegen. Zusätzlich werden hier Daten über die Gebäudezugänge erfasst. Bei der Platzierung von Zufahrten und Zugängen ist die Rotationsausrichtung anzufügen (s. Attribut „DREH“), um eine korrekte Ausrichtung einer Pfeil-Symbolisierung zu gewährleisten. Bei Beschränkungen ist Rotationsausrichtung obsolet.",
-  "type": "object",
-  "properties": {
-    "type": {
-      "type": "string",
-      "enum": [
-        "FeatureCollection"
-      ]
-    },
-    "features": {
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/ZufahrtZugangPointFeature"
-      }
-    }
-  },
-  "required": [
-    "type",
-    "features"
-  ],
+  "$ref": "#/$defs/ZufahrtZugangFeatureCollection",
   "$defs": {
-    "ZufahrtZugangPointFeature": {
-      "type": "object",
-      "properties": {
-        "type": {
-          "type": "string",
-          "enum": [
-            "Feature"
-          ]
+    "ZufahrtZugangFeatureCollection": {
+      "allOf": [
+        {
+          "$ref": "Grunddatentypen.schema.json#/$defs/FeatureCollection"
         },
-        "geometry": {
-          "oneOf": [
-            {
-              "$ref": "GeoJSON.schema.json#/$defs/Point"
-            }
-          ]
-        },
-        "properties": {
+        {
           "type": "object",
           "properties": {
-            "BEZ": {
-              "description": "Bezeichnung",
+            "title": {
               "type": "string",
               "enum": [
-                "P200",
-                "P201",
-                "P202",
-                "P203",
-                "P204",
-                "P205",
-                "P206"
+                "p_zufahrt_zugang"
               ]
             },
-            "FWPNR": {
-              "description": "Feuerwehrplannummer",
-              "$ref": "GeoJSON.schema.json#/$defs/TrimmedString"
-            },
-            "STN": {
-              "description": "Stand",
-              "type": "string",
-              "format": "date"
-            },
-            "AKT": {
-              "description": "Aktualisierung",
-              "type": "string",
-              "format": "date"
-            },
-            "AUF": {
-              "description": "Aufgeschaltet",
-              "type": "boolean"
-            },
-            "DREH": {
-              "description": "Drehwinkel",
-              "type": "number"
-            },
-            "BESCH": {
-              "description": "Beschränkung",
-              "type": "number"
-            },
-            "ANM": {
-              "description": "Anmerkung",
-              "$ref": "GeoJSON.schema.json#/$defs/TrimmedString"
+            "features": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/ZufahrtZugangPointFeature"
+              }
             }
           },
           "required": [
-            "BEZ",
-            "FWPNR",
-            "STN",
-            "AKT",
-            "AUF",
-            "DREH",
-            "BESCH",
-            "ANM"
+            "title",
+            "features"
           ]
         }
-      },
-      "required": [
-        "type",
-        "geometry",
-        "properties"
+      ]
+    },
+    "ZufahrtZugangPointBEZ": {
+      "$ref": "Attributdatenfelder.schema.json#/$defs/BEZ",
+      "enum": [
+        "P200",
+        "P201",
+        "P202",
+        "P203",
+        "P204",
+        "P205",
+        "P206"
+      ]
+    },
+    "ZufahrtZugangPointFeature": {
+      "allOf": [
+        {
+          "$ref": "Grunddatentypen.schema.json#/$defs/PolygonFeature"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "BEZ": {
+                  "$ref": "#/$defs/ZufahrtZugangPointBEZ"
+                },
+                "FWPNR": {
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/FWPNR"
+                },
+                "STN": {
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/STN"
+                },
+                "AKT": {
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/AKT"
+                },
+                "DREH": {
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/DREH"
+                },
+                "BESCH": {
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/BESCH"
+                },
+                "ANM": {
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/ANM"
+                }
+              },
+              "required": [
+                "BEZ",
+                "FWPNR",
+                "STN",
+                "AKT",
+                "DREH",
+                "BESCH",
+                "ANM"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        }
       ]
     }
   }

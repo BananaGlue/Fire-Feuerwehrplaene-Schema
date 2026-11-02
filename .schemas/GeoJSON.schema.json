@@ -1,12 +1,7 @@
 {
-  "$id": "https://fireapp.io/GeoJSON.schema.json",
+  "$id": "GeoJSON.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$defs": {
-    "TrimmedString": {
-      "type": "string",
-      "pattern": "^\\S(.*\\S)?$",
-      "description": "A string without leading or trailing whitespace."
-    },
     "GeoJsonObject": {
       "required": [
         "type"

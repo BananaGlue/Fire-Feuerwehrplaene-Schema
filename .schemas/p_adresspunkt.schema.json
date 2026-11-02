@@ -1,141 +1,104 @@
 {
+  "$id": "p_adresspunkt.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://fireapp.io/p_adresspunkt.schema.json",
   "title": "p_adresspunkt",
   "description": "Dient der Hinterlegung von Daten zu Adresse, Betreiber und Planersteller. Die Platzierung soll an der straßenzugewandten Seite der (Haupt-) Gebäudefläche erfolgen.",
   "$ref": "#/$defs/AdresspunktPointFeatureCollection",
   "$defs": {
     "AdresspunktPointFeatureCollection": {
-      "properties": {
-        "type": {
-          "type": "string",
-          "enum": [
-            "FeatureCollection"
-          ]
+      "allOf": [
+        {
+          "$ref": "Grunddatentypen.schema.json#/$defs/FeatureCollection"
         },
-        "title": {
-          "type": "string",
-          "enum": [
-            "p_adresspunkt"
-          ]
-        },
-        "crs": {
+        {
           "type": "object",
           "properties": {
-            "type": {
+            "title": {
               "type": "string",
               "enum": [
-                "name"
+                "p_adresspunkt"
               ]
             },
-            "properties": {
-              "type": "object",
-              "properties": {
-                "name": {
-                  "type": "string",
-                  "enum": [
-                    "urn:ogc:def:crs:OGC:1.3:CRS84"
-                  ]
-                }
+            "features": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/AdresspunktPointFeature"
               }
-            }
-          }
-        },
-        "features": {
-          "type": "array",
-          "items": {
-            "$ref": "#/$defs/AdresspunktPointFeature"
-          }
-        }
-      },
-      "required": [
-        "type",
-        "features"
-      ]
-    },
-    "AdresspunktPointFeature": {
-      "type": "object",
-      "properties": {
-        "type": {
-          "type": "string",
-          "enum": [
-            "Feature"
-          ]
-        },
-        "geometry": {
-          "oneOf": [
-            {
-              "$ref": "GeoJSON.schema.json#/$defs/Point"
-            }
-          ]
-        },
-        "properties": {
-          "type": "object",
-          "properties": {
-            "BEZ": {
-              "description": "Bezeichnung",
-              "type": "string",
-              "enum": [
-                "P000"
-              ]
-            },
-            "FWPNR": {
-              "description": "Feuerwehrplannummer",
-              "$ref": "GeoJSON.schema.json#/$defs/TrimmedString"
-            },
-            "STN": {
-              "description": "Stand",
-              "type": "string",
-              "format": "date"
-            },
-            "AKT": {
-              "description": "Aktualisierung",
-              "type": "string",
-              "format": "date"
-            },
-            "STRHNR": {
-              "description": "Straße HausNr.",
-              "$ref": "GeoJSON.schema.json#/$defs/TrimmedString"
-            },
-            "PLZ": {
-              "description": "Postleitzahl",
-              "type": "integer"
-            },
-            "ORT": {
-              "description": "Ort",
-              "$ref": "GeoJSON.schema.json#/$defs/TrimmedString"
-            },
-            "BTR": {
-              "description": "Gebäudebetreiber",
-              "$ref": "GeoJSON.schema.json#/$defs/TrimmedString"
-            },
-            "PLER": {
-              "description": "Planersteller",
-              "$ref": "GeoJSON.schema.json#/$defs/TrimmedString"
-            },
-            "ANM": {
-              "description": "Anmerkung",
-              "$ref": "GeoJSON.schema.json#/$defs/TrimmedString"
             }
           },
           "required": [
-            "BEZ",
-            "FWPNR",
-            "STN",
-            "AKT",
-            "STRHNR",
-            "PLZ",
-            "ORT",
-            "BTR",
-            "PLER",
-            "ANM"
+            "title",
+            "features"
           ]
         }
-      },
-      "required": [
-        "type",
-        "geometry",
-        "properties"
+      ]
+    },
+    "AdresspunktPointBEZ": {
+      "$ref": "Attributdatenfelder.schema.json#/$defs/BEZ",
+      "enum": [
+        "P000"
+      ]
+    },
+    "AdresspunktPointFeature": {
+      "allOf": [
+        {
+          "$ref": "Grunddatentypen.schema.json#/$defs/PolygonFeature"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "BEZ": {
+                  "$ref": "#/$defs/AdresspunktPointBEZ"
+                },
+                "FWPNR": {
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/FWPNR"
+                },
+                "STN": {
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/STN"
+                },
+                "AKT": {
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/AKT"
+                },
+                "STRHNR": {
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/STRHNR"
+                },
+                "PLZ": {
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/PLZ"
+                },
+                "ORT": {
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/ORT"
+                },
+                "BTR": {
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/BTR"
+                },
+                "PLER": {
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/PLER"
+                },
+                "ANM": {
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/ANM"
+                }
+              },
+              "required": [
+                "BEZ",
+                "FWPNR",
+                "STN",
+                "AKT",
+                "STRHNR",
+                "PLZ",
+                "ORT",
+                "BTR",
+                "PLER",
+                "ANM"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        }
       ]
     }
   }

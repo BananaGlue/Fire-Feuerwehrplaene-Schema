@@ -1,128 +1,121 @@
 {
+  "$id": "p_besonderegefahren.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://fireapp.io/p_besonderegefahren.schema.json",
   "title": "p_besonderegefahren",
   "description": "Umfasst Hinweise auf besondere Gefahren. Über die Bezeichnung wird die Art der Gefahr definiert über das Attribut „GEF“ wird die Gefahrenquelle definiert. Detailangaben zu Menge, Sicherheitsabstand und Gefahrengruppe sind bei Bedarf in Abhängigkeit zum jeweiligen Element zu wählen.",
-  "type": "object",
-  "properties": {
-    "type": {
-      "type": "string",
-      "enum": [
-        "FeatureCollection"
-      ]
-    },
-    "features": {
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/BesondereGefahrenPointFeature"
-      }
-    }
-  },
-  "required": [
-    "type",
-    "features"
-  ],
+  "$ref": "#/$defs/BesondereGefahrenPointFeatureCollection",
   "$defs": {
-    "BesondereGefahrenPointFeature": {
-      "type": "object",
-      "properties": {
-        "type": {
-          "type": "string",
-          "enum": [
-            "Feature"
-          ]
+    "BesondereGefahrenPointFeatureCollection": {
+      "allOf": [
+        {
+          "$ref": "Grunddatentypen.schema.json#/$defs/FeatureCollection"
         },
-        "geometry": {
-          "oneOf": [
-            {
-              "$ref": "GeoJSON.schema.json#/$defs/Point"
-            }
-          ]
-        },
-        "properties": {
+        {
           "type": "object",
           "properties": {
-            "BEZ": {
-              "description": "Bezeichnung",
+            "title": {
               "type": "string",
               "enum": [
-                "P600",
-                "P601",
-                "P602",
-                "P603",
-                "P604",
-                "P605",
-                "P606",
-                "P607",
-                "P608",
-                "P609",
-                "P610",
-                "P611",
-                "P612",
-                "P613",
-                "P614",
-                "P615",
-                "P616",
-                "P617"
+                "p_besonderegefahren"
               ]
             },
-            "FWPNR": {
-              "description": "Feuerwehrplannummer",
-              "$ref": "GeoJSON.schema.json#/$defs/TrimmedString"
-            },
-            "STN": {
-              "description": "Stand",
-              "type": "string",
-              "format": "date"
-            },
-            "AKT": {
-              "description": "Aktualisierung",
-              "type": "string",
-              "format": "date"
-            },
-            "GEF": {
-              "description": "Gefahr",
-              "$ref": "GeoJSON.schema.json#/$defs/TrimmedString"
-            },
-            "GESCH": {
-              "description": "Geschoss",
-              "$ref": "GeoJSON.schema.json#/$defs/TrimmedString"
-            },
-            "STD": {
-              "description": "Standort",
-              "$ref": "GeoJSON.schema.json#/$defs/TrimmedString"
-            },
-            "MENG": {
-              "description": "Menge",
-              "$ref": "GeoJSON.schema.json#/$defs/TrimmedString"
-            },
-            "SAB": {
-              "description": "Sicherheitsabstand",
-              "$ref": "GeoJSON.schema.json#/$defs/TrimmedString"
-            },
-            "GFG": {
-              "description": "Gefahrengruppe",
-              "$ref": "GeoJSON.schema.json#/$defs/TrimmedString"
+            "features": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/BesondereGefahrenPointFeature"
+              }
             }
           },
           "required": [
-            "BEZ",
-            "FWPNR",
-            "STN",
-            "AKT",
-            "GEF",
-            "GESCH",
-            "STD",
-            "MENG",
-            "SAB",
-            "GFG"
+            "title",
+            "features"
           ]
         }
-      },
-      "required": [
-        "type",
-        "geometry",
-        "properties"
+      ]
+    },
+    "BesondereGefahrenPointBEZ": {
+      "$ref": "Attributdatenfelder.schema.json#/$defs/BEZ",
+      "enum": [
+        "P600",
+        "P601",
+        "P602",
+        "P603",
+        "P604",
+        "P605",
+        "P606",
+        "P607",
+        "P608",
+        "P609",
+        "P610",
+        "P611",
+        "P612",
+        "P613",
+        "P614",
+        "P615",
+        "P616",
+        "P617"
+      ]
+    },
+    "BesondereGefahrenPointFeature": {
+      "allOf": [
+        {
+          "$ref": "Grunddatentypen.schema.json#/$defs/PolygonFeature"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "BEZ": {
+                  "$ref": "#/$defs/BesondereGefahrenPointBEZ"
+                },
+                "FWPNR": {
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/FWPNR"
+                },
+                "STN": {
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/STN"
+                },
+                "AKT": {
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/AKT"
+                },
+                "GEF": {
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/GEF"
+                },
+                "GESCH": {
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/GESCH"
+                },
+                "STO": {
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/STO"
+                },
+                "MENG": {
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/MENG"
+                },
+                "SAB": {
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/SAB"
+                },
+                "GFG": {
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/GFG"
+                }
+              },
+              "required": [
+                "BEZ",
+                "FWPNR",
+                "STN",
+                "AKT",
+                "GEF",
+                "GESCH",
+                "STO",
+                "MENG",
+                "SAB",
+                "GFG"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        }
       ]
     }
   }

@@ -1,102 +1,97 @@
 {
+  "$id": "l_vorbeugenderbaulicherbrandschutz.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://fireapp.io/l_vorbeugenderbaulicherbrandschutz.schema.json",
   "title": "l_vorbeugenderbaulicherbrandschutz",
   "description": "Umfasst Elemente mit einer linienförmigen Ausprägung und wird z.T. in Kombination mit Elementen aus punktförmiger Darstellung verwendet.",
-  "type": "object",
-  "properties": {
-    "type": {
-      "type": "string",
-      "enum": [
-        "FeatureCollection"
-      ]
-    },
-    "features": {
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/VorbeugenderBaulicherBrandschutzLineFeature"
-      }
-    }
-  },
-  "required": [
-    "type",
-    "features"
-  ],
+  "$ref": "#/$defs/VorbeugenderBaulicherBrandschutzLineFeatureCollection",
   "$defs": {
-    "VorbeugenderBaulicherBrandschutzLineFeature": {
-      "type": "object",
-      "properties": {
-        "type": {
-          "type": "string",
-          "enum": [
-            "Feature"
-          ]
+    "VorbeugenderBaulicherBrandschutzLineFeatureCollection": {
+      "allOf": [
+        {
+          "$ref": "Grunddatentypen.schema.json#/$defs/FeatureCollection"
         },
-        "geometry": {
-          "oneOf": [
-            {
-              "$ref": "GeoJSON.schema.json#/$defs/LineString"
-            }
-          ]
-        },
-        "properties": {
+        {
           "type": "object",
           "properties": {
-            "BEZ": {
-              "description": "Bezeichnung",
+            "title": {
               "type": "string",
               "enum": [
-                "L100",
-                "L101",
-                "L102"
+                "l_vorbeugenderbaulicherbrandschutz"
               ]
             },
-            "FWPNR": {
-              "description": "Feuerwehrplannummer",
-              "$ref": "GeoJSON.schema.json#/$defs/TrimmedString"
-            },
-            "STN": {
-              "description": "Stand",
-              "type": "string",
-              "format": "date"
-            },
-            "AKT": {
-              "description": "Aktualisierung",
-              "type": "string",
-              "format": "date"
-            },
-            "GESCHU": {
-              "description": "Straße HausNr.",
-              "$ref": "GeoJSON.schema.json#/$defs/TrimmedString"
-            },
-            "GESCHO": {
-              "description": "unterstes Geschoss",
-              "$ref": "GeoJSON.schema.json#/$defs/TrimmedString"
-            },
-            "ORT": {
-              "description": "oberstes Geschoss",
-              "$ref": "GeoJSON.schema.json#/$defs/TrimmedString"
-            },
-            "ANM": {
-              "description": "Anmerkung",
-              "$ref": "GeoJSON.schema.json#/$defs/TrimmedString"
+            "features": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/VorbeugenderBaulicherBrandschutzLineFeature"
+              }
             }
           },
           "required": [
-            "BEZ",
-            "FWPNR",
-            "STN",
-            "AKT",
-            "GESCHU",
-            "GESCHO",
-            "ANM"
+            "title",
+            "features"
           ]
         }
-      },
-      "required": [
-        "type",
-        "geometry",
-        "properties"
+      ]
+    },
+    "VorbeugenderBaulicherBrandschutzLineBEZ": {
+      "$ref": "Attributdatenfelder.schema.json#/$defs/BEZ",
+      "enum": [
+        "L100",
+        "L101",
+        "L102"
+      ]
+    },
+    "VorbeugenderBaulicherBrandschutzLineFeature": {
+      "allOf": [
+        {
+          "$ref": "Grunddatentypen.schema.json#/$defs/PolygonFeature"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "BEZ": {
+                  "$ref": "#/$defs/VorbeugenderBaulicherBrandschutzLineBEZ"
+                },
+                "FWPNR": {
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/FWPNR"
+                },
+                "STN": {
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/STN"
+                },
+                "AKT": {
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/AKT"
+                },
+                "GESCHU": {
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/GESCHU"
+                },
+                "GESCHO": {
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/GESCHO"
+                },
+                "ORT": {
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/ORT"
+                },
+                "ANM": {
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/ANM"
+                }
+              },
+              "required": [
+                "BEZ",
+                "FWPNR",
+                "STN",
+                "AKT",
+                "GESCHU",
+                "GESCHO",
+                "ANM"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        }
       ]
     }
   }

@@ -1,101 +1,97 @@
 {
+  "$id": "p_brandmeldezentrale.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://fireapp.io/p_brandmeldezentrale.schema.json",
   "title": "p_brandmeldezentrale",
   "description": "Enthält Daten zur Brandmeldezentrale.",
-  "type": "object",
-  "properties": {
-    "type": {
-      "type": "string",
-      "enum": [
-        "FeatureCollection"
-      ]
-    },
-    "features": {
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/BrandmeldezentralePointFeature"
-      }
-    }
-  },
-  "required": [
-    "type",
-    "features"
-  ],
+  "$ref": "#/$defs/BrandmeldezentralePointFeatureCollection",
   "$defs": {
-    "BrandmeldezentralePointFeature": {
-      "type": "object",
-      "properties": {
-        "type": {
-          "type": "string",
-          "enum": [
-            "Feature"
-          ]
+    "BrandmeldezentralePointFeatureCollection": {
+      "allOf": [
+        {
+          "$ref": "Grunddatentypen.schema.json#/$defs/FeatureCollection"
         },
-        "geometry": {
-          "oneOf": [
-            {
-              "$ref": "GeoJSON.schema.json#/$defs/Point"
-            }
-          ]
-        },
-        "properties": {
+        {
           "type": "object",
           "properties": {
-            "BEZ": {
-              "description": "Bezeichnung",
+            "title": {
               "type": "string",
               "enum": [
-                "P100"
+                "p_brandmeldezentrale"
               ]
             },
-            "FWPNR": {
-              "description": "Feuerwehrplannummer",
-              "$ref": "GeoJSON.schema.json#/$defs/TrimmedString"
-            },
-            "STN": {
-              "description": "Stand",
-              "type": "string",
-              "format": "date"
-            },
-            "AKT": {
-              "description": "Aktualisierung",
-              "type": "string",
-              "format": "date"
-            },
-            "AUF": {
-              "description": "Aufgeschaltet",
-              "type": "boolean"
-            },
-            "UGM": {
-              "description": "UGM-Nummer",
-              "type": "integer"
-            },
-            "PRIV": {
-              "description": "Privat",
-              "type": "boolean"
-            },
-            "ANM": {
-              "description": "Anmerkung",
-              "$ref": "GeoJSON.schema.json#/$defs/TrimmedString"
+            "features": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/BrandmeldezentralePointFeature"
+              }
             }
           },
           "required": [
-            "BEZ",
-            "FWPNR",
-            "STN",
-            "AKT",
-            "AUF",
-            "UGM",
-            "PRIV",
-            "ANM"
+            "title",
+            "features"
           ]
         }
-      },
-      "required": [
-        "type",
-        "geometry",
-        "properties"
+      ]
+    },
+    "BrandmeldezentralePointBEZ": {
+      "$ref": "Attributdatenfelder.schema.json#/$defs/BEZ",
+      "enum": [
+        "P100"
+      ]
+    },
+    "BrandmeldezentralePointFeature": {
+      "allOf": [
+        {
+          "$ref": "Grunddatentypen.schema.json#/$defs/PolygonFeature"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "BEZ": {
+                  "$ref": "#/$defs/BrandmeldezentralePointBEZ"
+                },
+                "FWPNR": {
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/FWPNR"
+                },
+                "STN": {
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/STN"
+                },
+                "AKT": {
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/AKT"
+                },
+                "AUF": {
+                  "description": "Aufgeschaltet",
+                  "type": "boolean"
+                },
+                "UGM": {
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/UGM"
+                },
+                "PRIV": {
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/PRIV"
+                },
+                "ANM": {
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/ANM"
+                }
+              },
+              "required": [
+                "BEZ",
+                "FWPNR",
+                "STN",
+                "AKT",
+                "AUF",
+                "UGM",
+                "PRIV",
+                "ANM"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        }
       ]
     }
   }

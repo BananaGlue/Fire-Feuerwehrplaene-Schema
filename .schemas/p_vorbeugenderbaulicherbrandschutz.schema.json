@@ -1,171 +1,164 @@
 {
+  "$id": "p_vorbeugenderbaulicherbrandschutz.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://fireapp.io/p_vorbeugenderbaulicherbrandschutz.schema.json",
   "title": "p_vorbeugenderbaulicherbrandschutz",
   "description": "Umfasst Daten zu Anlagen des vorbeugenden Baulichen Brandschutzes. Die Notwendigkeit zur Befüllung der einzelnen Fachattribute ist in Abhängigkeit zur jeweiligen Einrichtung zu wählen. Der Elementtyp „Brandwand“ und „Komplextrennwand“ sind mittig zu platzieren. Der genaue Verlauf dieser Elemente ist im Linien-Layer l_vorbeugenderBaulicherBrandschutz zu versorgen.",
-  "type": "object",
-  "properties": {
-    "type": {
-      "type": "string",
-      "enum": [
-        "FeatureCollection"
-      ]
-    },
-    "features": {
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/VorbeugenderBaulicherBrandschutzPointFeature"
-      }
-    }
-  },
-  "required": [
-    "type",
-    "features"
-  ],
+  "$ref": "#/$defs/VorbeugenderBaulicherBrandschutzPointFeatureCollection",
   "$defs": {
-    "VorbeugenderBaulicherBrandschutzPointFeature": {
-      "type": "object",
-      "properties": {
-        "type": {
-          "type": "string",
-          "enum": [
-            "Feature"
-          ]
+    "VorbeugenderBaulicherBrandschutzPointFeatureCollection": {
+      "allOf": [
+        {
+          "$ref": "Grunddatentypen.schema.json#/$defs/FeatureCollection"
         },
-        "geometry": {
-          "oneOf": [
-            {
-              "$ref": "GeoJSON.schema.json#/$defs/Point"
-            }
-          ]
-        },
-        "properties": {
+        {
           "type": "object",
           "properties": {
-            "BEZ": {
-              "description": "Bezeichnung",
+            "title": {
               "type": "string",
               "enum": [
-                "P400",
-                "P401",
-                "P402",
-                "P403",
-                "P404",
-                "P405",
-                "P406",
-                "P407",
-                "P408",
-                "P409",
-                "P410",
-                "P411",
-                "P412",
-                "P413",
-                "P414",
-                "P415",
-                "P416",
-                "P417",
-                "P418",
-                "P419",
-                "P420",
-                "P421",
-                "P422",
-                "P423",
-                "P424",
-                "P425",
-                "P426",
-                "P427",
-                "P428",
-                "P429",
-                "P430",
-                "P431",
-                "P432",
-                "P433",
-                "P434",
-                "P435",
-                "P436",
-                "P437",
-                "P438",
-                "P439",
-                "P440",
-                "P441",
-                "P442",
-                "P443",
-                "P444",
-                "P445",
-                "P446",
-                "P447",
-                "P448",
-                "P449",
-                "P450",
-                "P451",
-                "P452",
-                "P453",
-                "P454",
-                "P455",
-                "P456",
-                "P457",
-                "P458",
-                "P459",
-                "P460"
+                "p_vorbeugenderbaulicherbrandschutz"
               ]
             },
-            "FWPNR": {
-              "description": "Feuerwehrplannummer",
-              "$ref": "GeoJSON.schema.json#/$defs/TrimmedString"
-            },
-            "STN": {
-              "description": "Stand",
-              "type": "string",
-              "format": "date"
-            },
-            "AKT": {
-              "description": "Aktualisierung",
-              "type": "string",
-              "format": "date"
-            },
-            "GESCH": {
-              "description": "Geschoss",
-              "$ref": "GeoJSON.schema.json#/$defs/TrimmedString"
-            },
-            "STD": {
-              "description": "Standort",
-              "$ref": "GeoJSON.schema.json#/$defs/TrimmedString"
-            },
-            "HAUPT": {
-              "description": "Hauptschalter",
-              "$ref": "GeoJSON.schema.json#/$defs/TrimmedString"
-            },
-            "PVS": {
-              "description": "PV-Speicher",
-              "type": "boolean"
-            },
-            "FWK": {
-              "description": "Feuerwiderstandsklasse",
-              "$ref": "GeoJSON.schema.json#/$defs/TrimmedString"
-            },
-            "ANM": {
-              "description": "Anmerkung",
-              "$ref": "GeoJSON.schema.json#/$defs/TrimmedString"
+            "features": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/VorbeugenderBaulicherBrandschutzPointFeature"
+              }
             }
           },
           "required": [
-            "BEZ",
-            "FWPNR",
-            "STN",
-            "AKT",
-            "GESCH",
-            "STD",
-            "HAUPT",
-            "PVS",
-            "FWK",
-            "ANM"
+            "title",
+            "features"
           ]
         }
-      },
-      "required": [
-        "type",
-        "geometry",
-        "properties"
+      ]
+    },
+    "VorbeugenderBaulicherBrandschutzPointBEZ": {
+      "$ref": "Attributdatenfelder.schema.json#/$defs/BEZ",
+      "enum": [
+        "P400",
+        "P401",
+        "P402",
+        "P403",
+        "P404",
+        "P405",
+        "P406",
+        "P407",
+        "P408",
+        "P409",
+        "P410",
+        "P411",
+        "P412",
+        "P413",
+        "P414",
+        "P415",
+        "P416",
+        "P417",
+        "P418",
+        "P419",
+        "P420",
+        "P421",
+        "P422",
+        "P423",
+        "P424",
+        "P425",
+        "P426",
+        "P427",
+        "P428",
+        "P429",
+        "P430",
+        "P431",
+        "P432",
+        "P433",
+        "P434",
+        "P435",
+        "P436",
+        "P437",
+        "P438",
+        "P439",
+        "P440",
+        "P441",
+        "P442",
+        "P443",
+        "P444",
+        "P445",
+        "P446",
+        "P447",
+        "P448",
+        "P449",
+        "P450",
+        "P451",
+        "P452",
+        "P453",
+        "P454",
+        "P455",
+        "P456",
+        "P457",
+        "P458",
+        "P459",
+        "P460"
+      ]
+    },
+    "VorbeugenderBaulicherBrandschutzPointFeature": {
+      "allOf": [
+        {
+          "$ref": "Grunddatentypen.schema.json#/$defs/PolygonFeature"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "BEZ": {
+                  "$ref": "#/$defs/VorbeugenderBaulicherBrandschutzPointBEZ"
+                },
+                "FWPNR": {
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/FWPNR"
+                },
+                "STN": {
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/STN"
+                },
+                "AKT": {
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/AKT"
+                },
+                "GESCH": {
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/KEN"
+                },
+                "STO": {
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/STO"
+                },
+                "HAUPT": {
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/HAUPT"
+                },
+                "PVS": {
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/PVS"
+                },
+                "FWK": {
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/FWK"
+                },
+                "ANM": {
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/ANM"
+                }
+              },
+              "required": [
+                "BEZ",
+                "FWPNR",
+                "STN",
+                "AKT",
+                "GESCH",
+                "STO",
+                "HAUPT",
+                "PVS",
+                "FWK",
+                "ANM"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        }
       ]
     }
   }

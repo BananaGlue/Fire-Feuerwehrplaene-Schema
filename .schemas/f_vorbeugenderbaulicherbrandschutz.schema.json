@@ -1,106 +1,101 @@
 {
+  "$id": "f_vorbeugenderbaulicherbrandschutz.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://fireapp.io/f_vorbeugenderbaulicherbrandschutz.schema.json",
   "title": "f_vorbeugenderbaulicherbrandschutz",
   "description": "Umfasst Elemente mit einer flächenhaften Ausprägung. Sie können in Kombination mit Elementen aus punkförmiger Darstellung auftreten.\nFür Einsatzkräfte befahrbare oder nicht befahrbare Flächen sind nur auf privaten Geländen darzustellen. Das öffentliche Straßenland ist im Regelfall unangetastet zu lassen.",
-  "type": "object",
-  "properties": {
-    "type": {
-      "type": "string",
-      "enum": [
-        "FeatureCollection"
-      ]
-    },
-    "features": {
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/VorbeugenderBaulicherBrandschutzPolygonFeature"
-      }
-    }
-  },
-  "required": [
-    "type",
-    "features"
-  ],
+  "$ref": "#/$defs/VorbeugenderBaulicherBrandschutzPolygonFeatureCollection",
   "$defs": {
-    "VorbeugenderBaulicherBrandschutzPolygonFeature": {
-      "type": "object",
-      "properties": {
-        "type": {
-          "type": "string",
-          "enum": [
-            "Feature"
-          ]
+    "VorbeugenderBaulicherBrandschutzPolygonFeatureCollection": {
+      "allOf": [
+        {
+          "$ref": "Grunddatentypen.schema.json#/$defs/FeatureCollection"
         },
-        "geometry": {
-          "oneOf": [
-            {
-              "$ref": "GeoJSON.schema.json#/$defs/Polygon"
-            }
-          ]
-        },
-        "properties": {
+        {
           "type": "object",
           "properties": {
-            "BEZ": {
-              "description": "Bezeichnung",
+            "title": {
               "type": "string",
               "enum": [
-                "F100",
-                "F101",
-                "F102",
-                "F103",
-                "F104",
-                "F105",
-                "F106",
-                "F107",
-                "F108",
-                "F109"
+                "f_vorbeugenderbaulicherbrandschutz"
               ]
             },
-            "FWPNR": {
-              "description": "Feuerwehrplannummer",
-              "$ref": "GeoJSON.schema.json#/$defs/TrimmedString"
-            },
-            "STN": {
-              "description": "Stand",
-              "type": "string",
-              "format": "date"
-            },
-            "AKT": {
-              "description": "Aktualisierung",
-              "type": "string",
-              "format": "date"
-            },
-            "GESCH": {
-              "description": "Straße HausNr.",
-              "$ref": "GeoJSON.schema.json#/$defs/TrimmedString"
-            },
-            "FERT": {
-              "description": "Fertigstellung",
-              "type": "string",
-              "format": "date"
-            },
-            "ANM": {
-              "description": "Anmerkung",
-              "$ref": "GeoJSON.schema.json#/$defs/TrimmedString"
+            "features": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/VorbeugenderBaulicherBrandschutzPolygonFeature"
+              }
             }
           },
           "required": [
-            "BEZ",
-            "FWPNR",
-            "STN",
-            "AKT",
-            "GESCH",
-            "FERT",
-            "ANM"
+            "title",
+            "features"
           ]
         }
-      },
-      "required": [
-        "type",
-        "geometry",
-        "properties"
+      ]
+    },
+    "VorbeugenderBaulicherBrandschutzPolygonBEZ": {
+      "$ref": "Attributdatenfelder.schema.json#/$defs/BEZ",
+      "enum": [
+        "F100",
+        "F101",
+        "F102",
+        "F103",
+        "F104",
+        "F105",
+        "F106",
+        "F107",
+        "F108",
+        "F109"
+      ]
+    },
+    "VorbeugenderBaulicherBrandschutzPolygonFeature": {
+      "allOf": [
+        {
+          "$ref": "Grunddatentypen.schema.json#/$defs/PolygonFeature"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "BEZ": {
+                  "$ref": "#/$defs/VorbeugenderBaulicherBrandschutzPolygonBEZ"
+                },
+                "FWPNR": {
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/FWPNR"
+                },
+                "STN": {
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/STN"
+                },
+                "AKT": {
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/AKT"
+                },
+                "GESCH": {
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/GESCH"
+                },
+                "FERT": {
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/FERT"
+                },
+                "ANM": {
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/ANM"
+                }
+              },
+              "required": [
+                "BEZ",
+                "FWPNR",
+                "STN",
+                "AKT",
+                "GESCH",
+                "FERT",
+                "ANM"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        }
       ]
     }
   }

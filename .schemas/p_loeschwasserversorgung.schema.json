@@ -1,128 +1,122 @@
 {
+  "$id": "p_loeschwasserversorgung.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://fireapp.io/p_loeschwasserversorgung.schema.json",
   "title": "p_loeschwasserversorgung",
   "description": "Umfasst Daten zu möglichen Löschwasserversorgungseinrichtungen. Die Notwendigkeit zur Befüllung der einzelnen Fachattribute ist in Abhängigkeit zur jeweiligen Einrichtung zu wählen.",
-  "type": "object",
-  "properties": {
-    "type": {
-      "type": "string",
-      "enum": [
-        "FeatureCollection"
-      ]
-    },
-    "features": {
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/LoeschwasserversorgungPointFeature"
-      }
-    }
-  },
-  "required": [
-    "type",
-    "features"
-  ],
+  "$ref": "#/$defs/LoeschwasserversorgungPointFeatureCollection",
   "$defs": {
-    "LoeschwasserversorgungPointFeature": {
-      "type": "object",
-      "properties": {
-        "type": {
-          "type": "string",
-          "enum": [
-            "Feature"
-          ]
+    "LoeschwasserversorgungPointFeatureCollection": {
+      "allOf": [
+        {
+          "$ref": "Grunddatentypen.schema.json#/$defs/FeatureCollection"
         },
-        "geometry": {
-          "oneOf": [
-            {
-              "$ref": "GeoJSON.schema.json#/$defs/Point"
-            }
-          ]
-        },
-        "properties": {
+        {
           "type": "object",
           "properties": {
-            "BEZ": {
-              "description": "Bezeichnung",
+            "title": {
               "type": "string",
               "enum": [
-                "P300",
-                "P301",
-                "P302",
-                "P303",
-                "P304",
-                "P305",
-                "P306",
-                "P307",
-                "P308",
-                "P309",
-                "P310",
-                "P311",
-                "P312",
-                "P313",
-                "P314",
-                "P315",
-                "P316",
-                "P317"
+                "p_loeschwasserversorgung"
               ]
             },
-            "FWPNR": {
-              "description": "Feuerwehrplannummer",
-              "$ref": "GeoJSON.schema.json#/$defs/TrimmedString"
-            },
-            "STN": {
-              "description": "Stand",
-              "type": "string",
-              "format": "date"
-            },
-            "AKT": {
-              "description": "Aktualisierung",
-              "type": "string",
-              "format": "date"
-            },
-            "DN": {
-              "description": "Nenndurchmesser",
-              "type": "integer"
-            },
-            "ENT": {
-              "description": "Entnahmemenge",
-              "type": "integer"
-            },
-            "OEF": {
-              "description": "Oeffentlich",
-              "type": "boolean"
-            },
-            "GESCH": {
-              "description": "Geschoss",
-              "$ref": "GeoJSON.schema.json#/$defs/TrimmedString"
-            },
-            "EIN": {
-              "description": "Einspeisung",
-              "$ref": "GeoJSON.schema.json#/$defs/TrimmedString"
-            },
-            "ANM": {
-              "description": "Anmerkung",
-              "$ref": "GeoJSON.schema.json#/$defs/TrimmedString"
+            "features": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/LoeschwasserversorgungPointFeature"
+              }
             }
           },
           "required": [
-            "BEZ",
-            "FWPNR",
-            "STN",
-            "AKT",
-            "DN",
-            "ENT",
-            "OEF",
-            "GESCH",
-            "EIN",
-            "ANM"
+            "title",
+            "features"
           ]
         }
-      },
-      "required": [
-        "type",
-        "geometry",
-        "properties"
+      ]
+    },
+    "LoeschwasserversorgungPointBEZ": {
+      "$ref": "Attributdatenfelder.schema.json#/$defs/BEZ",
+      "enum": [
+        "P300",
+        "P301",
+        "P302",
+        "P303",
+        "P304",
+        "P305",
+        "P306",
+        "P307",
+        "P308",
+        "P309",
+        "P310",
+        "P311",
+        "P312",
+        "P313",
+        "P314",
+        "P315",
+        "P316",
+        "P317"
+      ]
+    },
+    "LoeschwasserversorgungPointFeature": {
+      "allOf": [
+        {
+          "$ref": "Grunddatentypen.schema.json#/$defs/PolygonFeature"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "BEZ": {
+                  "$ref": "#/$defs/LoeschwasserversorgungPointBEZ"
+                },
+                "FWPNR": {
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/FWPNR"
+                },
+                "STN": {
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/STN"
+                },
+                "AKT": {
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/AKT"
+                },
+                "DN": {
+                  "description": "Nenndurchmesser",
+                  "type": "integer"
+                },
+                "ENT": {
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/ENT"
+                },
+                "OEF": {
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/OEF"
+                },
+                "GESCH": {
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/GESCH"
+                },
+                "EIN": {
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/EIN"
+                },
+                "ANM": {
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/ANM"
+                }
+              },
+              "required": [
+                "BEZ",
+                "FWPNR",
+                "STN",
+                "AKT",
+                "DN",
+                "ENT",
+                "OEF",
+                "GESCH",
+                "EIN",
+                "ANM"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        }
       ]
     }
   }
