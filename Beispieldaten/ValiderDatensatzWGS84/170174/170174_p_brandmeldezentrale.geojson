@@ -17,7 +17,7 @@
         "AKT": "2026-06-18",
         "AUF": true,
         "UGM": 4036,
-        "PRIV": true,
+        "PRIV": 1,
         "ANM": "Hinter der Pforte links."
       },
       "geometry": {

@@ -17,9 +17,9 @@
         "AKT": "2026-06-18",
         "GEF": "Benzin",
         "GESCH": "+4",
-        "STD": "Raum 104.2",
+        "STO": "Raum 104.2",
         "MENG": "10",
-        "SAB": "50",
+        "SAB": 50,
         "GFG": "27",
         "ANM": "Hinter der Pforte links."
       },

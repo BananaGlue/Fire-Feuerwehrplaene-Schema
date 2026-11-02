@@ -16,9 +16,9 @@
         "STN": "2026-06-18",
         "AKT": "2026-06-18",
         "GESCH": "+14",
-        "STD": "Raum 104.2",
+        "STO": "Raum 104.2",
         "HAUPT": "170174",
-        "PVS": false,
+        "PVS": 0,
         "FWK": "170174",
         "ANM": "Hinter der Pforte links."
       },
