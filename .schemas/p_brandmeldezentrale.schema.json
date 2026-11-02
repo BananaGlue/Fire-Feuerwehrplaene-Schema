@@ -63,8 +63,7 @@
                   "$ref": "Attributdatenfelder.schema.json#/$defs/AKT"
                 },
                 "AUF": {
-                  "description": "Aufgeschaltet",
-                  "type": "boolean"
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/AUF"
                 },
                 "UGM": {
                   "$ref": "Attributdatenfelder.schema.json#/$defs/UGM"

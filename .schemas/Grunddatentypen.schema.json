@@ -20,6 +20,10 @@
       "minimum": 10000,
       "maximum": 99999
     },
+    "PositiveNumber": {
+      "type": "number",
+      "minimum": 0.0
+    },
     "DegreeNumber": {
       "type": "number",
       "minimum": 0.0,

@@ -70,9 +70,6 @@
                 "GESCHO": {
                   "$ref": "Attributdatenfelder.schema.json#/$defs/GESCHO"
                 },
-                "ORT": {
-                  "$ref": "Attributdatenfelder.schema.json#/$defs/ORT"
-                },
                 "ANM": {
                   "$ref": "Attributdatenfelder.schema.json#/$defs/ANM"
                 }

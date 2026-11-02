@@ -80,8 +80,7 @@
                   "$ref": "Attributdatenfelder.schema.json#/$defs/AKT"
                 },
                 "DN": {
-                  "description": "Nenndurchmesser",
-                  "type": "integer"
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/DN"
                 },
                 "ENT": {
                   "$ref": "Attributdatenfelder.schema.json#/$defs/ENT"
