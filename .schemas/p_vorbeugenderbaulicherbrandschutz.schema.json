@@ -120,7 +120,7 @@
                   "$ref": "Attributdatenfelder.schema.json#/$defs/AKT"
                 },
                 "GESCH": {
-                  "$ref": "Attributdatenfelder.schema.json#/$defs/KEN"
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/GESCH"
                 },
                 "STO": {
                   "$ref": "Attributdatenfelder.schema.json#/$defs/STO"
