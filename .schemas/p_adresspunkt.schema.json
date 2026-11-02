@@ -42,7 +42,7 @@
     "AdresspunktPointFeature": {
       "allOf": [
         {
-          "$ref": "Grunddatentypen.schema.json#/$defs/PolygonFeature"
+          "$ref": "Grunddatentypen.schema.json#/$defs/PointFeature"
         },
         {
           "type": "object",

@@ -43,7 +43,7 @@
     "FeuerwehrzufahrtenLineFeature": {
       "allOf": [
         {
-          "$ref": "Grunddatentypen.schema.json#/$defs/PolygonFeature"
+          "$ref": "Grunddatentypen.schema.json#/$defs/LineFeature"
         },
         {
           "type": "object",
