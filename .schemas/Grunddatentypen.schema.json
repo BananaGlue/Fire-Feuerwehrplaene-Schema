@@ -3,31 +3,60 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$defs": {
     "TrimmedString": {
-      "type": "string",
+      "$ref": "#/$defs/NullableTrimmedString",
+      "type": "string"
+    },
+    "NullableTrimmedString": {
+      "type": [
+        "string",
+        "null"
+      ],
       "pattern": "^\\S(.*\\S)?$"
     },
-    "IntegerBoolean": {
-      "type": "integer",
+    "NullableIntegerBoolean": {
+      "type": [
+        "integer",
+        "null"
+      ],
       "minimum": 0,
       "maximum": 1
     },
-    "PositiveInteger": {
-      "type": "integer",
+    "NullableNonNegativeInteger": {
+      "type": [
+        "integer",
+        "null"
+      ],
       "minimum": 0
     },
-    "PLZInteger": {
-      "type": "integer",
+    "NullablePLZInteger": {
+      "type": [
+        "integer",
+        "null"
+      ],
       "minimum": 10000,
       "maximum": 99999
     },
-    "PositiveNumber": {
-      "type": "number",
+    "NullablePositiveNumber": {
+      "type": [
+        "number",
+        "null"
+      ],
       "minimum": 0.0
     },
-    "DegreeNumber": {
-      "type": "number",
+    "NullableDegreeNumber": {
+      "type": [
+        "number",
+        "null"
+      ],
       "minimum": 0.0,
       "maximum": 360.0
+    },
+    "NullableDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
     },
     "FeatureCollection": {
       "properties": {

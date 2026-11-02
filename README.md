@@ -5,6 +5,7 @@ DIN 14095:2024-01 Anhang B (https://www.vfdb.de/media/doc/technischeberichte/TB_
 
 Es sind 8 Punktebenen, zwei Linienebenen und eine Flächenebene definiert, mit den folgenden Ebenennamen:
 
+### Punktebenen:
 - p_adresspunkt
 - p_brandmeldezentrale
 - p_zufahrt_zugang
@@ -14,9 +15,11 @@ Es sind 8 Punktebenen, zwei Linienebenen und eine Flächenebene definiert, mit d
 - p_vorbeugenderbaulicherbrandschutz
 - p_sonstigesymbole
 
+### Linienebenen:
 - l_vorbeugenderbaulicherbrandschutz
-- l_feuerwehrzufahrt
+- l_feuerwehrzufahrten
 
+### Flächenebene:
 - f_vorbeugenderbaulicherbrandschutz
 
 
@@ -33,7 +36,7 @@ Lautet die zugewiesene Feuerwehrplannummer beispielsweise `170174` so wären die
 - 170174_p_sonstigesymbole.geojson
 
 - 170174_l_vorbeugenderbaulicherbrandschutz.geojson
-- 170174_l_feuerwehrzufahrt.geojson
+- 170174_l_feuerwehrzufahrten.geojson
 
 - 170174_f_vorbeugenderbaulicherbrandschutz.geojson
 
