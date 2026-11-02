@@ -51,6 +51,26 @@
         "P315",
         "P316",
         "P317"
+      ],
+      "enumDescriptions": [
+        "Löschwasserteich",
+        "Löschwasserbrunnen",
+        "Löschwasserbehälter, überirdisch",
+        "Löschwasserbehälter, unterirdisch",
+        "Saugstelle für Löschmittel",
+        "Wasser-Staueinrichtung, vorbereitet",
+        "Oberflächenwasser-Schacht",
+        "Oberflächenwasser-Einlauf",
+        "Löschwassersauganschluss, unterflur",
+        "Löschwassersauganschluss, überflur",
+        "Unterflurhydrant",
+        "Überflurhydrant",
+        "Schlauchanschlussventil, trocken",
+        "Schlauchanschlussventil, nass",
+        "Wandhydrant Typ F",
+        "Löschwassereinspeiseeinrichtung",
+        "Löschwasser-Pumpe, Bedienstelle",
+        "Löschwasser-Druckerhöhungspumpe, Bedienstelle"
       ]
     },
     "LoeschwasserversorgungPointFeature": {

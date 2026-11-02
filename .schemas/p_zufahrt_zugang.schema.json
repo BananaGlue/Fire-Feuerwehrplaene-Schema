@@ -40,6 +40,15 @@
         "P204",
         "P205",
         "P206"
+      ],
+      "enumDescriptions": [
+        "Feuerwehr-Hauptzufahrt",
+        "Feuerwehr-Nebenzufahrt",
+        "Gebäudehaupteingang",
+        "Gebäudenebeneingang",
+        "max. Durchfahrtshöhe",
+        "max. Durchfahrtsbreite",
+        "max. zulässige Gesamtmasse"
       ]
     },
     "ZufahrtZugangPointFeature": {

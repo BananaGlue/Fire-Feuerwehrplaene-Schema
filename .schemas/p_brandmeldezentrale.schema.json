@@ -34,6 +34,9 @@
       "$ref": "Attributdatenfelder.schema.json#/$defs/BEZ",
       "enum": [
         "P100"
+      ],
+      "enumDescriptions": [
+        "Brandmeldezentrale"
       ]
     },
     "BrandmeldezentralePointFeature": {

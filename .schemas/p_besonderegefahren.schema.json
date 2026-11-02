@@ -51,6 +51,26 @@
         "P615",
         "P616",
         "P617"
+      ],
+      "enumDescriptions": [
+        "Allgemeines Warnzeichen",
+        "Warnung vor explosionsgefährlichen Stoffen",
+        "Warnung vor radioaktiven Stoffen oder ionisierender Strahlung",
+        "Warnung vor Laserstrahlen",
+        "Warnung vor nicht ionisierender Strahlung",
+        "Warnung vor magnetischem Feld",
+        "Warnung vor Hindernissen am Boden",
+        "Warnung vor Absturzgefahr",
+        "Warnung vor Biogefährdung",
+        "Warnung vor niedriger Temperatur/Frost",
+        "Warnung vor Rutschgefahr",
+        "Warnung vor elektrischer Spannung",
+        "Warnung vor giftigen Stoffen",
+        "Warnung vor feuergefährlichen Stoffen",
+        "Warnung vor Gefahren durch das Aufladen von Batterien",
+        "Warnung vor optischer Strahlung",
+        "Warnung vor brandfördernden Stoffen",
+        "Warnung vor Gasflaschen"
       ]
     },
     "BesondereGefahrenPointFeature": {

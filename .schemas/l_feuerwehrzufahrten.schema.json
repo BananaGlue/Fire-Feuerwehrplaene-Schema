@@ -35,6 +35,10 @@
       "enum": [
         "L200",
         "L201"
+      ],
+      "enumDescriptions": [
+        "Haupt-Feuerwehrzufahrt",
+        "Neben-Feuerwehrzufahrt"
       ]
     },
     "FeuerwehrzufahrtenLineFeature": {

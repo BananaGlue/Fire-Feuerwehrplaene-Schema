@@ -36,6 +36,11 @@
         "L100",
         "L101",
         "L102"
+      ],
+      "enumDescriptions": [
+        "Brandwand",
+        "Durchfahrt",
+        "Zaunanlage"
       ]
     },
     "VorbeugenderBaulicherBrandschutzLineFeature": {

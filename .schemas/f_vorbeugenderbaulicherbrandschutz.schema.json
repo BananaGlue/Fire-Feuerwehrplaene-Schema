@@ -43,6 +43,18 @@
         "F107",
         "F108",
         "F109"
+      ],
+      "enumDescriptions": [
+        "Räume mit besonderer Gefahr",
+        "Löschbereiche",
+        "Bereiche mit besonderer Gefahr",
+        "Untergeschosse",
+        "Gebäudekontur",
+        "Feuerwehraufstellfläche",
+        "Baustelle",
+        "Nicht befahrbare Fläche",
+        "befahrbare Fläche",
+        "Bewegungsfläche"
       ]
     },
     "VorbeugenderBaulicherBrandschutzPolygonFeature": {

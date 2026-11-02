@@ -41,6 +41,16 @@
         "P505",
         "P506",
         "P507"
+      ],
+      "enumDescriptions": [
+        "Feuerwehraufzug",
+        "Anleiterstelle",
+        "Treppenraum; mit brandschutztechnisch bemessener baulicher Abtrennung, erreichbare Geschosse",
+        "Treppenraum; mit brandschutztechnisch bemessener baulicher Abtrennung, erreichbare Geschosse, mit Treppenraumbezeichnung",
+        "Treppe oder Treppenraum; ohne brandschutztechnisch bemessene bauliche Abtrennung, erreichbare Geschosse",
+        "Treppe oder Treppenraum; ohne brandschutztechnisch bemessene bauliche Abtrennung, erreichbare Geschosse, mit Treppenraumbezeichnung",
+        "Sicherheitstreppenraum, erreichbare Geschosse, mit Treppenraumbezeichnung",
+        "Aufzug, erreichbare Geschosse"
       ]
     },
     "VertikaleErschliessungPointFeature": {
