@@ -15,9 +15,29 @@
         "FWPNR": "170174",
         "STN": "  18.06.2026",
         "AKT": "18.06.2026",
+        "AUF": 1,
+        "UGM": 4036,
+        "PRIV": 1,
+        "ANM": "Hinter der Pforte links."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.2748181,
+          51.4565328
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "BEZ": "P100",
+        "FWPNR": "170174",
+        "STN": "18.06.2026",
+        "AKT": "18.06.2026",
         "AUF": true,
         "UGM": 4036,
-        "PRIV": true,
+        "PRIV": 1,
         "ANM": "Hinter der Pforte links."
       },
       "geometry": {

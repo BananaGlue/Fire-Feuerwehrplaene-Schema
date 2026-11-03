@@ -11,7 +11,7 @@
     {
       "type": "Feature",
       "properties": {
-        "BEZ": "P600",
+        "BEZ": "P699",
         "FWPNR": "170174",
         "STN": "18.06.2026",
         "AKT": "18.06.2026",
@@ -19,7 +19,30 @@
         "GESCH": "+4",
         "STO": "Raum 104.2",
         "MENG": "10",
-        "SAB": "50",
+        "SAB": 50,
+        "GFG": "27",
+        "ANM": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.274810167237665,
+          51.45652479113506
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "BEZ": "P600",
+        "FWPNR": "17017",
+        "STN": "18.06.2026",
+        "AKT": "18.06.2026",
+        "GEF": "Benzin",
+        "GESCH": "+4",
+        "STO": "Raum 104.2",
+        "MENG": "10",
+        "SAB": 50,
         "GFG": "27",
         "ANM": null
       },
