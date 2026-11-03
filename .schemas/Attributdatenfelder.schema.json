@@ -16,12 +16,12 @@
     },
     "AKT": {
       "title": "Aktualisierung",
-      "description": "Datum der letzten Aktualisierung\n\nFormat: JJJJ-MM-TT. Beispiel: 2025-04-01",
+      "description": "Datum der letzten Aktualisierung\n\nFormat: TT.MM.JJJJ. Beispiel: 01.04.2025",
       "$ref": "Grunddatentypen.schema.json#/$defs/Date"
     },
     "STN": {
       "title": "Stand",
-      "description": "Datum des Datenstands. Bei Aktualisierungen ohne Veränderung kann das Datum zum Datum der letzten Aktualisierung abweichen.\n\nFormat: JJJJ-MM-TT. Beispiel: 2021-09-23",
+      "description": "Datum des Datenstands. Bei Aktualisierungen ohne Veränderung kann das Datum zum Datum der letzten Aktualisierung abweichen.\n\nFormat: TT.MM.JJJJ. Beispiel: 23.09.2021",
       "$ref": "Grunddatentypen.schema.json#/$defs/Date"
     },
     "STRHNR": {
@@ -162,7 +162,7 @@
     },
     "FERT": {
       "title": "Fertigstellung",
-      "description": "Datum der geplanten Fertigstellung. Bezieht sich nur auf die Fläche einer Baustelle (F106).\n\nFormat: JJJJ-MM-TT. Bei allen anderen Elementen ist der Wert null. Beispiel: 2021-09-23",
+      "description": "Datum der geplanten Fertigstellung. Bezieht sich nur auf die Fläche einer Baustelle (F106).\n\nFormat: TT.MM.JJJJ. Bei allen anderen Elementen ist der Wert null. Beispiel: 23.09.2021",
       "$ref": "Grunddatentypen.schema.json#/$defs/NullableDate"
     }
   }
