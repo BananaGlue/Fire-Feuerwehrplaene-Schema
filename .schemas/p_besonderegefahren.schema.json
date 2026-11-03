@@ -120,6 +120,9 @@
                 },
                 "GFG": {
                   "$ref": "Attributdatenfelder.schema.json#/$defs/GFG"
+                },
+                "ANM": {
+                  "$ref": "Attributdatenfelder.schema.json#/$defs/ANM"
                 }
               },
               "required": [
@@ -132,7 +135,8 @@
                 "STO",
                 "MENG",
                 "SAB",
-                "GFG"
+                "GFG",
+                "ANM"
               ]
             }
           },

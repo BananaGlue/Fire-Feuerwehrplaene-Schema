@@ -20,7 +20,8 @@
         "STO": "Raum 104.2",
         "MENG": "10",
         "SAB": "50",
-        "GFG": "27"
+        "GFG": "27",
+        "ANM": null
       },
       "geometry": {
         "type": "Point",
