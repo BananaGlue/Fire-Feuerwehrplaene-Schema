@@ -22,7 +22,7 @@ Es sind 8 Punktebenen, zwei Linienebenen und eine Flächenebene definiert, mit d
 ### Flächenebene:
 - f_vorbeugenderbaulicherbrandschutz
 
-Die Dateien sind wie im folgenden beschrieben zu benennen: `Feuerwehrplannummer_Ebenenname.geojson`
+Die Dateien sind wie im folgenden beschrieben zu benennen: `Feuerwehrplannummer_Ebenenname.geojson`. Alle Dateien sollen in einem Verzeichnis liegen, das nach der Feuerwehrplannummer benannt ist.
 Lautet die zugewiesene Feuerwehrplannummer beispielsweise `170174` so wären die zu liefernden Dateien jeweils so zu bennen:
 
 ```
