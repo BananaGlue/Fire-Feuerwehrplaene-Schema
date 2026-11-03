@@ -1,7 +1,6 @@
 {
   "$id": "GeoJSON.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$comment": "vfdb TB 07-01:2026-01",
   "$defs": {
     "GeoJsonObject": {
       "required": [
